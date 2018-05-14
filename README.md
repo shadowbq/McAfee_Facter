@@ -1,4 +1,4 @@
-#McAfee Facter
+# McAfee Facter
 
 McAfee Facter is a distribution of the puppet/puppetlabs facter 3.x native binary. 
 
