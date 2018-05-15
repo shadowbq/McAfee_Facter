@@ -6,69 +6,69 @@
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFilesFolder" Name="PFiles">
                 <Directory Id="McAfee" Name="McAfee">
-					<Directory Id="FACTER" Name="Facter">
-						<Component Id="FACTER.EXE" DiskId="1" Guid="3974C9D1-B0DC-41B4-AD33-DBDB93C224E0">
-							<File Id="FACTER.EXE" Name="facter.exe" Source="facter\facter.exe" />
-						</Component>
-						<Component Id="LICENSE.TXT" DiskId="1" Guid="ABC33BCA-BC11-4F8A-9677-589F22546123">
-							<File Id="LICENSE.TXT" Name="license.txt" Source="facter\license.txt" />
-						</Component>
-						<Component Id="LEATHERMAN_CURL.DLL" DiskId="1" Guid="67233BCA-BC11-4F8A-9677-589F225460F3">
-							<File Id="LEATHERMAN_CURL.DLL" Name="leatherman_curl.dll" Source="facter\leatherman_curl.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" DiskId="1" Guid="1A1C6F92-6519-4F59-8FFB-167EB12F7B5C">
-							<File Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" Name="leatherman_dynamic_library.dll" Source="facter\leatherman_dynamic_library.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_EXECUTION.DLL" DiskId="1" Guid="157F9522-92B3-4824-A602-B4AEBCECD9B9">
-							<File Id="LEATHERMAN_EXECUTION.DLL" Name="leatherman_execution.dll" Source="facter\leatherman_execution.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_FILE_UTIL.DLL" DiskId="1" Guid="810C1E29-D688-4608-A470-92D517211198">
-							<File Id="LEATHERMAN_FILE_UTIL.DLL" Name="leatherman_file_util.dll" Source="facter\leatherman_file_util.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_JSON_CONTAINER.DLL" DiskId="1" Guid="95445A95-349A-4902-8A14-4C0D4C046ACA">
-							<File Id="LEATHERMAN_JSON_CONTAINER.DLL" Name="leatherman_json_container.dll" Source="facter\leatherman_json_container.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_LOCALE.DLL" DiskId="1" Guid="C1E5F23C-6A37-47A4-908B-869CFF1CFFD8">
-							<File Id="LEATHERMAN_LOCALE.DLL" Name="leatherman_locale.dll" Source="facter\leatherman_locale.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_LOGGING.DLL" DiskId="1" Guid="016BFBEF-3CDA-4FC6-86DB-E5B1E7ECA77F">
-							<File Id="LEATHERMAN_LOGGING.DLL" Name="leatherman_logging.dll" Source="facter\leatherman_logging.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_NOWIDE.DLL" DiskId="1" Guid="4ECF6ACC-5040-4745-BF54-4227874080F0">
-							<File Id="LEATHERMAN_NOWIDE.DLL" Name="leatherman_nowide.dll" Source="facter\leatherman_nowide.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_RUBY.DLL" DiskId="1" Guid="66D53074-440A-4311-9B83-33EED110EA5F">
-							<File Id="LEATHERMAN_RUBY.DLL" Name="leatherman_ruby.dll" Source="facter\leatherman_ruby.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_UTIL.DLL" DiskId="1" Guid="4278292B-7815-4440-8144-762343154F4A">
-							<File Id="LEATHERMAN_UTIL.DLL" Name="leatherman_util.dll" Source="facter\leatherman_util.dll" />
-						</Component>
-						<Component Id="LEATHERMAN_WINDOWS.DLL" DiskId="1" Guid="AECDAC23-D0FF-4E3D-960B-B25D45678D27">
-							<File Id="LEATHERMAN_WINDOWS.DLL" Name="leatherman_windows.dll" Source="facter\leatherman_windows.dll" />
-						</Component>
-						<Component Id="LIBCURL_4.DLL" DiskId="1" Guid="E8B636C4-29E1-437E-AFFB-ED1B709F7176">
-							<File Id="LIBCURL_4.DLL" Name="libcurl-4.dll" Source="facter\libcurl-4.dll" />
-						</Component>
-						<Component Id="LIBFACTER.SO" DiskId="1" Guid="5A98D16D-9B4D-46A2-9F93-D51DF0BC1EC3">
-							<File Id="LIBFACTER.SO" Name="libfacter.so" Source="facter\libfacter.so" />
-						</Component>
-						<Component Id="LIBGCC_S_SEH_1.DLL" DiskId="1" Guid="EAD3BD39-9B10-4ABA-B01E-910ACF65A923">
-							<File Id="LIBGCC_S_SEH_1.DLL" Name="libgcc_s_seh-1.dll" Source="facter\libgcc_s_seh-1.dll" />
-						</Component>
-						<Component Id="LIBSTDC___6.DLL" DiskId="1" Guid="A4E5E3A6-E9C2-4FFB-96B5-8350B5CC0BA4">
-							<File Id="LIBSTDC___6.DLL" Name="libstdc++-6.dll" Source="facter\libstdc++-6.dll" />
-						</Component>
-						<Component Id="LIBWINPTHREAD_1.DLL" DiskId="1" Guid="32135CC4-E6E5-44E3-9FB9-906380D2A8A3">
-							<File Id="LIBWINPTHREAD_1.DLL" Name="libwinpthread-1.dll" Source="facter\libwinpthread-1.dll" />
-						</Component>
-						<Component Id="SSLEAY32.DLL" DiskId="1" Guid="C3FB893C-B553-4093-B44B-7EFB9AD9A038">
-							<File Id="SSLEAY32.DLL" Name="ssleay32.dll" Source="facter\ssleay32.dll" />
-						</Component>
-						<Component Id="ZLIB1.DLL" DiskId="1" Guid="45EA6A9A-7E02-4B3A-8038-946F5EB4995C">
-							<File Id="ZLIB1.DLL" Name="zlib1.dll" Source="facter\zlib1.dll" />
-						</Component>
-					</Directory>
-				</Directory>
+                    <Directory Id="FACTER" Name="Facter">
+                        <Component Id="FACTER.EXE" DiskId="1" Guid="3974C9D1-B0DC-41B4-AD33-DBDB93C224E0">
+                            <File Id="FACTER.EXE" Name="facter.exe" Source="facter\facter.exe" />
+                        </Component>
+                        <Component Id="LICENSE.TXT" DiskId="1" Guid="ABC33BCA-BC11-4F8A-9677-589F22546123">
+                            <File Id="LICENSE.TXT" Name="license.txt" Source="facter\license.txt" />
+                        </Component>
+                        <Component Id="LEATHERMAN_CURL.DLL" DiskId="1" Guid="67233BCA-BC11-4F8A-9677-589F225460F3">
+                            <File Id="LEATHERMAN_CURL.DLL" Name="leatherman_curl.dll" Source="facter\leatherman_curl.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" DiskId="1" Guid="1A1C6F92-6519-4F59-8FFB-167EB12F7B5C">
+                            <File Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" Name="leatherman_dynamic_library.dll" Source="facter\leatherman_dynamic_library.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_EXECUTION.DLL" DiskId="1" Guid="157F9522-92B3-4824-A602-B4AEBCECD9B9">
+                            <File Id="LEATHERMAN_EXECUTION.DLL" Name="leatherman_execution.dll" Source="facter\leatherman_execution.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_FILE_UTIL.DLL" DiskId="1" Guid="810C1E29-D688-4608-A470-92D517211198">
+                            <File Id="LEATHERMAN_FILE_UTIL.DLL" Name="leatherman_file_util.dll" Source="facter\leatherman_file_util.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_JSON_CONTAINER.DLL" DiskId="1" Guid="95445A95-349A-4902-8A14-4C0D4C046ACA">
+                            <File Id="LEATHERMAN_JSON_CONTAINER.DLL" Name="leatherman_json_container.dll" Source="facter\leatherman_json_container.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_LOCALE.DLL" DiskId="1" Guid="C1E5F23C-6A37-47A4-908B-869CFF1CFFD8">
+                            <File Id="LEATHERMAN_LOCALE.DLL" Name="leatherman_locale.dll" Source="facter\leatherman_locale.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_LOGGING.DLL" DiskId="1" Guid="016BFBEF-3CDA-4FC6-86DB-E5B1E7ECA77F">
+                            <File Id="LEATHERMAN_LOGGING.DLL" Name="leatherman_logging.dll" Source="facter\leatherman_logging.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_NOWIDE.DLL" DiskId="1" Guid="4ECF6ACC-5040-4745-BF54-4227874080F0">
+                            <File Id="LEATHERMAN_NOWIDE.DLL" Name="leatherman_nowide.dll" Source="facter\leatherman_nowide.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_RUBY.DLL" DiskId="1" Guid="66D53074-440A-4311-9B83-33EED110EA5F">
+                            <File Id="LEATHERMAN_RUBY.DLL" Name="leatherman_ruby.dll" Source="facter\leatherman_ruby.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_UTIL.DLL" DiskId="1" Guid="4278292B-7815-4440-8144-762343154F4A">
+                            <File Id="LEATHERMAN_UTIL.DLL" Name="leatherman_util.dll" Source="facter\leatherman_util.dll" />
+                        </Component>
+                        <Component Id="LEATHERMAN_WINDOWS.DLL" DiskId="1" Guid="AECDAC23-D0FF-4E3D-960B-B25D45678D27">
+                            <File Id="LEATHERMAN_WINDOWS.DLL" Name="leatherman_windows.dll" Source="facter\leatherman_windows.dll" />
+                        </Component>
+                        <Component Id="LIBCURL_4.DLL" DiskId="1" Guid="E8B636C4-29E1-437E-AFFB-ED1B709F7176">
+                            <File Id="LIBCURL_4.DLL" Name="libcurl-4.dll" Source="facter\libcurl-4.dll" />
+                        </Component>
+                        <Component Id="LIBFACTER.SO" DiskId="1" Guid="5A98D16D-9B4D-46A2-9F93-D51DF0BC1EC3">
+                            <File Id="LIBFACTER.SO" Name="libfacter.so" Source="facter\libfacter.so" />
+                        </Component>
+                        <Component Id="LIBGCC_S_SEH_1.DLL" DiskId="1" Guid="EAD3BD39-9B10-4ABA-B01E-910ACF65A923">
+                            <File Id="LIBGCC_S_SEH_1.DLL" Name="libgcc_s_seh-1.dll" Source="facter\libgcc_s_seh-1.dll" />
+                        </Component>
+                        <Component Id="LIBSTDC___6.DLL" DiskId="1" Guid="A4E5E3A6-E9C2-4FFB-96B5-8350B5CC0BA4">
+                            <File Id="LIBSTDC___6.DLL" Name="libstdc++-6.dll" Source="facter\libstdc++-6.dll" />
+                        </Component>
+                        <Component Id="LIBWINPTHREAD_1.DLL" DiskId="1" Guid="32135CC4-E6E5-44E3-9FB9-906380D2A8A3">
+                            <File Id="LIBWINPTHREAD_1.DLL" Name="libwinpthread-1.dll" Source="facter\libwinpthread-1.dll" />
+                        </Component>
+                        <Component Id="SSLEAY32.DLL" DiskId="1" Guid="C3FB893C-B553-4093-B44B-7EFB9AD9A038">
+                            <File Id="SSLEAY32.DLL" Name="ssleay32.dll" Source="facter\ssleay32.dll" />
+                        </Component>
+                        <Component Id="ZLIB1.DLL" DiskId="1" Guid="45EA6A9A-7E02-4B3A-8038-946F5EB4995C">
+                            <File Id="ZLIB1.DLL" Name="zlib1.dll" Source="facter\zlib1.dll" />
+                        </Component>
+                    </Directory>
+                </Directory>
             </Directory>
         </Directory>
         <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
@@ -94,5 +94,7 @@
             <ComponentRef Id="ZLIB1.DLL" />
         </Feature>
         <UI />
+        <Property Id="ARPPRODUCTICON" Id="icon.ico" Value="mcafee.ico" />
+        <Icon Id="mcafee.ico" SourceFile="facter\mcafee.ico" />
     </Product>
 </Wix>
