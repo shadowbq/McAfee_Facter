@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?define ProductVersion = "3.11.1.0004"?>
+<?define ProductUpgradeCode = "2BE7A5EC-C3B4-4297-B60E-75D6CED6C95E"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Id="1D92C05C-AE0D-4C80-A139-06BCB5E8ED5F" Name="McAfee Facter" Language="1033" Version="3.11.1.0002" Manufacturer="McAfee, LLC." UpgradeCode="2BE7A5EC-C3B4-4297-B60E-75D6CED6C95E">
+    <Product Id="*" Name="McAfee Facter" Language="1033" Version="$(var.ProductVersion)" Manufacturer="McAfee, LLC." UpgradeCode="$(var.ProductUpgradeCode)">
         <Package Description="POC Mar EEDK component" Comments="PreSales Engineering" InstallerVersion="200" Compressed="yes" />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+
+	<Upgrade Id="$(var.ProductUpgradeCode)">
+          <UpgradeVersion Minimum="$(var.ProductVersion)" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
+          <UpgradeVersion Minimum="0.0.0" Maximum="$(var.ProductVersion)" IncludeMinimum="yes" IncludeMaximum="no" Property="OLDERVERSIONBEINGUPGRADED"/>	  
+        </Upgrade>
+        <Condition Message="A newer version of this software is already installed.">NOT NEWERVERSIONDETECTED</Condition>
+
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFilesFolder" Name="PFiles">
                 <Directory Id="McAfee" Name="McAfee">
                     <Directory Id="FACTER" Name="Facter">
+                        <Component Id="RegistryEntries" Guid="257F9522-32B3-6824-A602-BADBEEFCD9B9">                        
+                             <RegistryValue Root="HKLM" Key="Software\McAfee\Facter" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                        </Component>
                         <Component Id="FACTER.EXE" DiskId="1" Guid="3974C9D1-B0DC-41B4-AD33-DBDB93C224E0">
                             <File Id="FACTER.EXE" Name="facter.exe" Source="..\vendor\facter\facter.exe" />
                         </Component>
@@ -71,7 +83,13 @@
                 </Directory>
             </Directory>
         </Directory>
+
+       <InstallExecuteSequence>
+         <RemoveExistingProducts After="InstallValidate"/>
+       </InstallExecuteSequence>
+
         <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="RegistryEntries" />
             <ComponentRef Id="FACTER.EXE" />
             <ComponentRef Id="LICENSE.TXT" />
             <ComponentRef Id="LEATHERMAN_CURL.DLL" />
@@ -96,5 +114,7 @@
         <UI />
         <Icon Id="mcafee.ico" SourceFile="..\src\icons\mcafee.ico" />
         <Property Id="ARPPRODUCTICON" Value="mcafee.ico" />
+        <Property Id="ARPNOREPAIR" Value="1"/>
+        <Property Id="ARPNOMODIFY" Value="1"/>
     </Product>
 </Wix>
