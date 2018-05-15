@@ -103,6 +103,57 @@ This `facter.exe` has links against a slew a `.dlls` that are required for opera
 
 ![Screenshot](meta/Apps%20%26%20Features%20Installed.png?raw=true "Screenshot")
 
+
+## External facts
+
+run `external-dir` looking at cmds or yara etc..
+
+```
+C:\tools\mfe-facter-repo\vendor\facter>facter --verbose --external-dir .\lib
+2018-05-15 01:11:10.548616 INFO  puppetlabs.facter - executed with command line: --verbose --external-dir .\lib.
+2018-05-15 01:11:10.557610 WARN  puppetlabs.facter - could not locate a ruby library: facts requiring Ruby will not be resolved.
+2018-05-15 01:11:10.558611 INFO  puppetlabs.facter - resolving all facts.
+aio_agent_version => 5.5.1
+dmi => {
+  manufacturer => "Phoenix Technologies LTD",
+  product => {
+    name => "VMware Virtual Platform",
+    serial_number => "VMware-56 4d 50 a5 57 62 17 6c-18 d1 05 48 4d 99 78 1c"
+  }
+}
+facterversion => 3.11.1
+hypervisors => {
+  vmware => {}
+}
+identity => {
+  privileged => true,
+  user => "DESKTOP-0SH1SKQ\smacgreg"
+}
+is_virtual => true
+kernel => windows
+kernelmajversion => 10.0
+kernelrelease => 10.0.16299
+kernelversion => 10.0.16299
+key1 => val1
+key2 => val2
+key3 => val3
+```
+
+.bat command returning new facts
+
+```
+@echo off
+echo key1=val1
+echo key2=val2
+echo key3=val3
+REM Invalid - echo 'key4=val4'
+REM Invalid - echo "key5=val5"
+```
+
+https://github.com/puppetlabs/facter/blob/master/Extensibility.md
+
+https://puppet.com/docs/facter/3.9/custom_facts.html
+
 ## MSI Build Process
 
 Using the WiX Editor with the new Wix Binary tools to build the MSI.
