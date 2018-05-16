@@ -104,6 +104,11 @@ This `facter.exe` has links against a slew a `.dlls` that are required for opera
 ![Screenshot](meta/Apps%20%26%20Features%20Installed.png?raw=true "Screenshot")
 
 
+## Installation
+
+Installation requires the "administrative" context.
+`msiexec /i facter.msi /passive /qn`
+
 ## External facts
 
 run `external-dir` looking at cmds or yara etc..
@@ -174,3 +179,9 @@ The MSI installer does a good job of logging the installation into "App & Featur
 ## Supportablity
 
 This is a community tool orginally written by PuppetLabs and is distributed "as is" while licensed under the Apache 2.0 License. McAfee does not, and will not provide support for this tool. 
+
+## Puppet Labs Reference
+
+* https://github.com/puppetlabs/facter
+
+* https://github.com/puppetlabs/facter/blob/master/LICENSE
