@@ -187,6 +187,27 @@ light.exe -nologo facter.wixobj -cultures:fr-fr -loc fr-fr.wxl -out facter-fr-fr
 
 The `-loc` flag is used to specify the language file to use. It is important to include the `-cultures` flag on the command line to ensure the correct localized strings are included for extensions such as WiXUIExtension.
 
+## Releasing
+
+```
+C:\tools\mfe-facter-repo>git tag -a v3.11.1.8 -m "facter-3.11.1.8"
+
+C:\tools\mfe-facter-repo>git push origin --tags
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Username for 'https://github.com': shadowbq
+Password for 'https://shadowbq@github.com':
+Counting objects: 11, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 7.35 KiB | 0 bytes/s, done.
+Total 11 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/shadowbq/McAfee_Facter.git
+ * [new tag]         v3.11.1.8 -> v3.11.1.8
+ ```
+
+
 ### Familiarity with WixEditor
 
 Using the WiX Editor with the new Wix Binary tools to build the MSI, although it doesnt support more complex options.
