@@ -112,7 +112,7 @@ Installation requires the "administrative" context.
 
 ### Version Elements
 
-As this package follows the symentec versioning of Puppet Facter, only the fourth version number is changed if there is an internal change (MSI tweaks, external facts, etc) to the MSI without changing the core `facter` elements. 
+As this package follows the semantic versioning of Puppet Facter, only the fourth version number is changed if there is an internal change (MSI tweaks, external facts, etc) to the MSI without changing the core `facter` elements. 
 
 **Warning:** Because MSI ignores the fourth product version field, this allows downgrades when the first three product version fields are identical. For example, product version 1.0.0.1 will "upgrade" 1.0.0.2998 because they're seen as the same version (1.0.0). That could reintroduce serious bugs.
 
@@ -200,7 +200,7 @@ The MSI installer does a good job of logging the installation into "App & Featur
 ![Screenshot](meta/Registry_Entries.png?raw=true "Screenshot")
 
 
-## Uninstallin
+## Uninstalling
 
 Facter includes a Windows Registry key "ProductID" which can be used for uninstallation with msiexec
 
