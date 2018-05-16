@@ -1,8 +1,8 @@
 # McAfee Facter
 
-McAfee Facter is a distribution of the puppet/puppetlabs facter 3.x native binary. 
+McAfee Facter is a distribution of the puppet/puppetlabs 64bit facter 3.x native binary for windows as an MSI. 
 
-```C:\Program Files (x86)\McAfee\Facter>facter.exe -y --no-ruby
+```C:\Program Files\McAfee\Facter>facter.exe -y --no-ruby
 aio_agent_version: 5.5.1
 dmi:
   manufacturer: Phoenix Technologies LTD
@@ -109,34 +109,38 @@ This `facter.exe` has links against a slew a `.dlls` that are required for opera
 run `external-dir` looking at cmds or yara etc..
 
 ```
-C:\tools\mfe-facter-repo\vendor\facter>facter --verbose --external-dir .\lib
-2018-05-15 01:11:10.548616 INFO  puppetlabs.facter - executed with command line: --verbose --external-dir .\lib.
-2018-05-15 01:11:10.557610 WARN  puppetlabs.facter - could not locate a ruby library: facts requiring Ruby will not be resolved.
-2018-05-15 01:11:10.558611 INFO  puppetlabs.facter - resolving all facts.
-aio_agent_version => 5.5.1
-dmi => {
-  manufacturer => "Phoenix Technologies LTD",
-  product => {
-    name => "VMware Virtual Platform",
-    serial_number => "VMware-56 4d 50 a5 57 62 17 6c-18 d1 05 48 4d 99 78 1c"
-  }
-}
-facterversion => 3.11.1
-hypervisors => {
-  vmware => {}
-}
-identity => {
-  privileged => true,
-  user => "DESKTOP-0SH1SKQ\smacgreg"
-}
-is_virtual => true
-kernel => windows
-kernelmajversion => 10.0
-kernelrelease => 10.0.16299
-kernelversion => 10.0.16299
-key1 => val1
-key2 => val2
-key3 => val3
+PS C:\Program Files\McAfee\Facter> .\facter.exe -y --no-ruby --external-dir .\lib
+aio_agent_version: 5.5.1
+dmi:
+  manufacturer: Phoenix Technologies LTD
+  product:
+    name: VMware Virtual Platform
+    serial_number: VMware-56 4d 50 a5 57 62 17 6c-18 d1 05 48 4d 99 78 1c
+facterversion: 3.11.1
+hypervisors:
+  vmware:
+    {}
+identity:
+  privileged: false
+  user: DESKTOP-0SH1SKQ\smacgreg
+is_virtual: true
+kernel: windows
+kernelmajversion: "10.0"
+kernelrelease: 10.0.16299
+kernelversion: 10.0.16299
+key1: val1
+key2: val2
+key3: val3
+memory:
+  system:
+    available: 4.61 GiB
+    available_bytes: 4954136576
+    capacity: 48.31%
+    total: 8.93 GiB
+    total_bytes: 9583448064
+    used: 4.31 GiB
+    used_bytes: 4629311488
+networking:
 ```
 
 .bat command returning new facts
@@ -159,3 +163,14 @@ https://puppet.com/docs/facter/3.9/custom_facts.html
 Using the WiX Editor with the new Wix Binary tools to build the MSI.
 
 ![Screenshot](meta/WiXEditor.png?raw=true "Screenshot")
+
+## Checking for installation
+
+The MSI installer does a good job of logging the installation into "App & Features" and creating/uninstalling windows Registry keys.
+
+![Screenshot](meta/Registry_Entries.png?raw=true "Screenshot")
+
+
+## Supportablity
+
+This is a community tool orginally written by PuppetLabs and is distributed "as is" while licensed under the Apache 2.0 License. McAfee does not, and will not provide support for this tool. 
