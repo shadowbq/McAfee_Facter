@@ -1,0 +1,5 @@
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+<String Id="ApplicationName">Facter</String>
+<String Id="ManufacturerName">McAfee, LLC.</String>
+<String Id="NewerVersionInstalled">There is a newer version installed.</String>
+</WixLocalization>

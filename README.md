@@ -109,6 +109,13 @@ This `facter.exe` has links against a slew a `.dlls` that are required for opera
 Installation requires the "administrative" context.
 `msiexec /i facter.msi /passive /qn`
 
+
+### Version Elements
+
+As this package follows the symentec versioning of Puppet Facter, only the fourth version number is changed if there is an internal change (MSI tweaks, external facts, etc) to the MSI without changing the core `facter` elements. 
+
+**Warning:** Because MSI ignores the fourth product version field, this allows downgrades when the first three product version fields are identical. For example, product version 1.0.0.1 will "upgrade" 1.0.0.2998 because they're seen as the same version (1.0.0). That could reintroduce serious bugs.
+
 ## External facts
 
 run `external-dir` looking at cmds or yara etc..
@@ -165,7 +172,24 @@ https://puppet.com/docs/facter/3.9/custom_facts.html
 
 ## MSI Build Process
 
-Using the WiX Editor with the new Wix Binary tools to build the MSI.
+### Building localized installers from the command line
+The first step in building a localized installer is to compile your WiX sources using candle.exe:
+
+```
+candle.exe -nologo facter.wxs -out facter.wixobj
+```
+After the intermediate output file is generated you can then use light.exe to generate multiple localized MSIs:
+
+```
+light.exe -nologo facter.wixobj -cultures:en-us -loc en-us.wxl -out facter.msi
+light.exe -nologo facter.wixobj -cultures:fr-fr -loc fr-fr.wxl -out facter-fr-fr.msi
+```
+
+The `-loc` flag is used to specify the language file to use. It is important to include the `-cultures` flag on the command line to ensure the correct localized strings are included for extensions such as WiXUIExtension.
+
+### Familiarity with WixEditor
+
+Using the WiX Editor with the new Wix Binary tools to build the MSI, although it doesnt support more complex options.
 
 ![Screenshot](meta/WiXEditor.png?raw=true "Screenshot")
 
@@ -175,6 +199,14 @@ The MSI installer does a good job of logging the installation into "App & Featur
 
 ![Screenshot](meta/Registry_Entries.png?raw=true "Screenshot")
 
+
+## Uninstallin
+
+Facter includes a Windows Registry key "ProductID" which can be used for uninstallation with msiexec
+
+`msiexec /x {C93DC4BF-D45E-40E4-A1D6-8467250E2AFB}`
+
+Note: The ProductID will change with each new version of the MSI.
 
 ## Supportablity
 

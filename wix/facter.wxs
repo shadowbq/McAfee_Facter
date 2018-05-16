@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?define ProductVersion = "3.11.1.7"?>
+<?define ProductVersion = "3.11.1.8"?>
 <?define ProductUpgradeCode = "2BE7A5EC-C3B4-4297-B60E-75D6CED6C95E"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Product Id="*" Name="McAfee Facter" Language="1033" Version="$(var.ProductVersion)" Manufacturer="McAfee, LLC." UpgradeCode="$(var.ProductUpgradeCode)">
         <Package Description="POC Mar EEDK component" Comments="PreSales Engineering" InstallerVersion="200" Compressed="yes" Platform ='x64' />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
-
-	<Upgrade Id="$(var.ProductUpgradeCode)">
-          <UpgradeVersion Minimum="$(var.ProductVersion)" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
-          <UpgradeVersion Minimum="0.0.0" Maximum="$(var.ProductVersion)" IncludeMinimum="yes" IncludeMaximum="no" Property="OLDERVERSIONBEINGUPGRADED"/>	  
-        </Upgrade>
-        <Condition Message="A newer version of this software is already installed.">NOT NEWERVERSIONDETECTED</Condition>
-
+        <MajorUpgrade AllowDowngrades="no" DowngradeErrorMessage="!(loc.NewerVersionInstalled)" AllowSameVersionUpgrades="yes" />
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFiles64Folder" Name="PFiles">
                 <Directory Id="McAfee" Name="McAfee">
@@ -25,6 +19,7 @@
                             <RegistryKey Root="HKLM" Key="Software\McAfee\Facter">
                                 <RegistryValue Type="integer" Name="Installed" Value="1" KeyPath="yes"/>
                                 <RegistryValue Type="string" Name="InstallPath" Value="[FACTER]"/>
+                                <RegistryValue Type="string" Name="ProductID" Value="[ProductCode]"/>
                                 <RegistryValue Id="InstallDateTime" Name="InstallDateTime" Value='[Date] [Time]' Type="string" />
                             </RegistryKey> 
                         </Component>
@@ -92,10 +87,6 @@
                 </Directory>
             </Directory>
         </Directory>
-
-       <InstallExecuteSequence>
-         <RemoveExistingProducts After="InstallValidate"/>
-       </InstallExecuteSequence>
 
         <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
             <ComponentRef Id="RegistryEntries" />
