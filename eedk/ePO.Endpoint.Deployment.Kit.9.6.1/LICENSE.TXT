@@ -1,0 +1,422 @@
+
+This is the license that pertains to the ePO Endpoint Deployment Kit (EEDK)
+
+IMPORTANT - READ BEFORE COPYING, INSTALLING OR USING.
+
+Do not copy, install or use the Materials (as defined below) provided 
+under this license agreement ("Agreement") from Intel Americas, Inc. 
+("Intel"), until you ("You") have carefully read the following terms and 
+conditions. By copying, installing or otherwise using the Materials, You 
+agree to be bound by the terms of this Agreement. If You do not agree to 
+the terms of this Agreement, do not copy, install or use the Materials.
+
+If You are agreeing to the terms and conditions of this Agreement on 
+behalf of a company or other legal entity ("Legal Entity"), You 
+represent and warrant that You have the legal authority to bind that 
+Legal Entity to the Agreement, in which case, "You" or "Your" will mean 
+such Legal Entity.
+
+By agreeing to this Agreement, You affirm that You are of legal age (18 
+years old or older) to enter into this Agreement. If You are not of 
+legal age You may not enter into this Agreement, and either Your parent, 
+legal guardian or Legal Entity must agree to the terms and conditions of 
+this Agreement and enter into this Agreement, in which case, "You" or 
+"Your" will mean such parent, legal guardian, or Legal Entity.
+
+Third Party Programs (as defined below), even if included with the 
+distribution of the Materials, are governed by separate third party 
+license terms, including without limitation, open source software 
+license terms. Such third party license terms (and not this Agreement) 
+govern Your use of the Third Party Programs, and Intel is not liable for 
+the Third Party Programs.
+
+1. LICENSE DEFINITIONS:
+"Derivative Work" means a derivative work, as defined in 17 U.S.C. § 
+101, of the Software Source Code that You developed.
+
+"Documentation" means the user manuals and other written materials that 
+describe the Software, its operation and matters related to its use, 
+that Intel provides in connection with, under, or subject to, this 
+Agreement, and any updated, improved or modified version(s) of those 
+materials, whether provided in published written material, on magnetic 
+media or communicated by electronic means.
+
+"Executable Code" means computer programming code in binary form 
+suitable for machine execution by a processor without the intervening 
+steps of interpretation or compilation.
+
+"Licensed Patent Claims" means the claims of Intel’s patents that are 
+necessarily and directly infringed by the reproduction of the Materials 
+that is authorized in Section 2 below, when the Materials are in its 
+unmodified form as delivered by Intel to You and not modified or 
+combined with anything else. Licensed Patent Claims are only those 
+claims that Intel can license without paying, or getting the consent of, 
+a third party.
+
+"Materials" means the Software, Source Code and/or End-User 
+Documentation but do not include Third Party Programs.
+
+"Software" means the computer program, in Executable Code and Source 
+Code, as delivered by Intel to You, and any updated or improved 
+version(s) of the program that Intel provides to You under this 
+Agreement, if any.
+
+"Source Code" is defined as the Software (and not documentation or text) 
+portion of the Materials provided in human readable format, and includes 
+modifications that You make or are made on Your behalf as expressly 
+permitted under the terms of this Agreement. 
+
+"Third Party Programs" (if any) are the third party software files that 
+may be included with the Materials for the applicable Software that 
+include a separate third party license agreement in an attached text 
+file. 
+
+2. LICENSE GRANT:
+Subject to the terms and conditions of this Agreement, Intel grants You 
+a non-exclusive, worldwide, non-assignable, non-sublicensable, personal, 
+royalty-free, limited right and license:
+
+A. under its copyrights, to:
+(1) make a reasonable number of copies of all or any portion of the 
+    Materials solely for Your internal use, and to load data into or 
+    display, view or extract output results from or otherwise operate any 
+    portion of the Software exclusively for the purpose of integrating and 
+    supporting Intel Security’s ePolicy Orchestrator product; provided, 
+    however, that this license may be exercised only by Your employees and 
+    only within Your facilities; 
+
+(2) prepare Derivative Works of the Software or Source Code as permitted 
+    in this Agreement in order to provide support and use of the Software or 
+    Source Code exclusively for the purpose of integrating and supporting 
+    Intel Security’s ePolicy Orchestrator product; provided, however, that 
+    this license may be exercised only by Your employees and only within 
+    Your facilities; 
+
+(3) reproduce the Documentation as is reasonably necessary for You to 
+    exercise Your license rights under this Agreement. 
+
+B. Under its patents, to:
+(1) make copies of the Materials only within Your facilities and only by 
+    Your employees; and 
+
+(2) use the Materials only within Your facilities and only by Your 
+    employees exclusively for the purpose of integrating and supporting 
+    Intel Security’s ePolicy Orchestrator product; 
+    (a) provided, however, that the license under the Licensed Patent Claims 
+        does not and will not apply to any Derivative Works of the Software, 
+        whether made by You or any third party even if the Derivative Works 
+        are permitted under this Agreement.  
+
+C. Under its trade secrets, to:
+(1) use the Materials only within Your facilities and only by Your employees. 
+
+3. LICENSE RESTRICTIONS:
+A. Except as expressly provided in this Agreement, You may not and may 
+not allow any third party to: 
+
+(1) use, copy, distribute or publicly display the Materials;
+
+(2) reverse-assemble, reverse-compile, or otherwise reverse-engineer, 
+    disassemble or decompile the Software or Source Code;
+
+(3) rent or lease the Materials to any third party;
+
+(4) assign this Agreement or transfer the Materials;
+
+(5) modify, adapt, enhance, disassemble, decompile, change, translate or 
+    create Derivative Works of the Materials in whole or in part;
+
+(6) distribute, sell, sublicense or transfer the Materials or 
+derivatives thereof to any third party;
+
+(7)include the Materials in malicious, deceptive, or unlawful programs 
+or products;
+
+(8) use the Materials to process the data of, or make the Software 
+available online for the use of, third parties; or
+
+(9) create Derivate Works of the Documentation.
+
+B. The consideration under this Agreement is only for the licenses that 
+Intel expressly grants to You in Section 2. Any other rights including, 
+but not limited to, additional patent rights, will require an additional 
+license and additional consideration. Nothing in this Agreement requires 
+or will be treated to require Intel to grant any additional license. You 
+acknowledge that an essential basis of the bargain in this Agreement is 
+that Intel grants You no licenses or other rights including, but not 
+limited to, patent, copyright, trademark, trade name, service mark or 
+other intellectual property licenses or rights with respect to the 
+Materials, by implication, estoppel or otherwise, except for the 
+licenses expressly granted in Section 2.
+
+C. You acknowledge that there are significant uses of the Software in 
+its original, unmodified and uncombined form. The consideration for the 
+license in this Agreement reflects Intel’s continuing right to assert 
+patent claims against any modifications or Derivative Works (including, 
+without limitation, error corrections and bug fixes) of, or combinations 
+with, the Software that You or third parties make that infringe any 
+Intel patent claim.
+
+D. You will not allow the Materials to be accessed or used by third 
+parties or anyone other than Your employees whose duties require access 
+or use. Notwithstanding the foregoing, Your authorized consultants and 
+subcontractors may access the Materials where the access is incidental 
+to their performing services on Your behalf consistent with the license 
+granted to You under this Agreement, provided:
+
+(1) You first require those consultants and subcontractors to sign 
+written agreements obligating them to observe the same restrictions 
+concerning the Materials as are contained in this Agreement; and
+
+(2) You are fully liable to Intel for the actions and inaction of those 
+consultants and subcontractors.
+
+E. You will maintain and handle the Source Code in the same manner as 
+You would maintain and handle Your own Source Code, and with no less 
+than reasonable care.
+
+4. OWNERSHIP: 
+A. Title to the Materials and all copies thereof remain with Intel or 
+its licensors. The Materials are copyrighted and are protected by United 
+States copyright laws and international treaty provisions. You will not 
+remove any copyright notices from the Materials. You agree to prevent 
+unauthorized copying of the Materials. Except as expressly provided 
+herein, Intel does not grant any express or implied right to you under 
+Intel patents, copyrights, trademarks, or trade secret information. In 
+making copies as permitted under this Agreement You must copy all 
+copyright legends, trademarks, trade names and other legends and 
+identifications. You will maintain records of the number of copies 
+currently in Your possession or control, and the location of each copy 
+of the Source Code and Derivative Works and will provide copies of those 
+records to Intel upon request.
+
+B. Intel will own all copyrights in all Derivative Works. You 
+irrevocably transfer and assign to Intel in perpetuity all worldwide 
+copyrights, (including, but not limited to, applications for 
+registration of those rights and all priority rights under applicable 
+international conventions for the protection of those rights) in the 
+Derivative Works that You may have, as and when those rights arise. You 
+will maintain and protect Intel’s copyrights in the Derivative Works 
+including, but not limited to, executing any documents that Intel 
+reasonably considers necessary for that purpose. Intel will have the 
+sole and unlimited right to reproduce, publish and display the 
+Derivative Works, in whole or in part, or combine the Derivative Works 
+with other matter or not use the Derivative Works at all. Intel grants 
+to You a nonexclusive, worldwide, perpetual, non-transferable, 
+non-sublicensable license under Intel’s copyrights in the Derivative 
+Works to the same extent and subject to the same restrictions as are 
+applicable to Your license of the Software under this Agreement.
+
+C. To the extent You provide Intel with Feedback and Intel incorporates 
+that Feedback in its products, You grant to Intel and Intel accepts, a 
+worldwide, non-exclusive, perpetual, irrevocable, royalty-free, 
+transferable license, with the right to sublicense, under Your 
+intellectual property rights to the Feedback to incorporate or otherwise 
+use Feedback as provided by You to Intel in the design of Intel products 
+and to design, debug, display, perform, prepare derivative works, copy, 
+make, have made, use, disclose, distribute, sell, and otherwise dispose 
+of and support Intel’s and its sublicensees’ products and 
+Documentation embodying the Feedback in any manner and via any media 
+Intel chooses, without reference to the source. "Feedback" means Your 
+requirements, inputs, comments, responses, opinions, feedback and 
+errata, whether oral or written, concerning the Software and 
+Documentation and Your technical system requirements for Intel to 
+include in the Software definition, design or validation.
+
+5. NO WARRANTY AND NO SUPPORT: Disclaimer. The Materials are provided As 
+Is. Intel disclaims all warranties of any kind and the terms and 
+remedies provided in this Agreement, if any, are instead of any other 
+warranty or condition, express, implied or statutory, including those 
+regarding merchantability, fitness for any particular purpose, 
+non-infringement or any warranty arising out of any course of dealing, 
+usage of trade, proposal, specification or sample. Intel does not assume 
+(and does not authorize any person to assume on its behalf) any other 
+liability.
+
+Intel may make changes to the Materials, or to items referenced therein, 
+at any time without notice, but is not obligated to support, update or 
+provide training for the Materials. Intel will not provide support to 
+You for your use of the Materials.
+
+6. USER SUBMISSIONS: You agree that any material, information, or other 
+communication, including all data, images, sounds, text, and other 
+things embodied therein, you transmit or post to an Intel website will 
+be considered non-confidential ("Communications"). Intel will have no 
+confidentiality obligations with respect to the Communications. You 
+agree that Intel and its designees will be free to copy, modify, create 
+derivative works, publicly display, disclose, distribute, license and 
+sublicense through multiple tiers of distribution and licensees, 
+incorporate, and otherwise use the Communications, including derivative 
+works thereto, for any and all commercial or non-commercial purposes.
+
+7. CONFIDENTIAL INFORMATION:
+A. Non-Disclosure Agreements. The parties have entered into a 
+Non-Disclosure Agreement the terms of which the parties agree will 
+govern the disclosure and use of Confidential Information under and 
+relating to this Agreement as fully as if set forth in this Agreement, 
+and whether or not the Non-Disclosure Agreement is executed by either or 
+both of the parties. All Confidential Information that each party 
+discloses in the course of performance under this Agreement will be 
+subject to the terms set forth in the Non-Disclosure Agreement(s), as 
+may be supplemented by the provisions of this Section 7. The terms of 
+the Non-Disclosure Agreement(s) will govern in all conflicts between 
+this Agreement and the Non-Disclosure Agreement(s). In no event will 
+disclosure of Confidential Information in accordance with the licenses 
+granted in Section 2 of this Agreement be considered a breach of the 
+Non-Disclosure Agreement(s). The existence of this Agreement and its 
+contents are the Confidential Information of both parties.
+
+B. No Publicity. You may not use Intel’s name, or the names of any 
+Intel employees, in any publication, advertisement or other 
+announcement, without Intel’s prior written consent in each instance.
+
+C. Remedy. You acknowledge and agree that if You breach this Section 7, 
+Intel will suffer irreparable harm for which money damages will not be 
+an adequate remedy. You therefore agree that Intel will be entitled to 
+an injunction restraining any breach or threatened breach of this 
+Section 7, without the necessity of proving irreparable harm or posting 
+a bond, in addition to all other rights and remedies at law, in equity 
+and under this Agreement.
+
+
+8. INDEMNIFICATION:
+A. You will defend, at Your own expense, any legal action brought 
+against Intel to the extent that it is based on any Indemnified Claim. 
+An Indemnified Claim is any of the following claims or allegations: 
+(1) a claim that the Derivative Works, or any portion of the Derivative 
+Works, in the form delivered to Intel, directly infringes patents or 
+copyrights or constitutes a misappropriation of trade secrets of any 
+third party; or
+
+(2) a claim arising from or relating to Your breach of any provision of 
+this Agreement including, but not limited to, a breach of Sections 2, 3 
+or 4; or
+
+(3) a claim resulting from Intel’s compliance with designs, plans or 
+specifications that You furnished.
+
+B. You will pay any costs and damages finally awarded against Intel that 
+are attributable to any Indemnified Claim or that Intel incurs through 
+settlement of an Indemnified Claim, but will not be responsible for any 
+compromise that Intel makes or expense that Intel incurs without Your 
+consent. The defense and payments are subject to the condition that 
+Intel gives You prompt written notice of the Indemnified Claim, allows 
+You to direct the defense and settlement of the Indemnified Claim, and 
+cooperates with You as necessary for defense and settlement of the 
+Indemnified Claim.
+
+9. LIMITATION OF LIABILITY: Neither Intel nor its suppliers shall be 
+liable for any losses or damages whatsoever and whether such losses or 
+damages were foreseen, foreseeable, known, or otherwise (including, 
+without limitation, damages for loss of business profits, business 
+interruption, loss of business information, lost profits, or any 
+indirect, incidental, special, or consequential loss or damage) arising 
+out of the use of or inability to use the Materials, even if Intel has 
+been advised of the possibility of such damages. Because some 
+jurisdictions prohibit the exclusion or limitation of liability for 
+consequential or incidental damages, the above limitation may not apply 
+to You. 
+
+10. TERM AND TERMINATION: This Agreement commences upon Your copying, 
+installing or using the Materials and continues until terminated. Intel 
+may terminate this Agreement at any time upon 30 days prior written 
+notice to You. Intel may terminate this license at any time if you are 
+in breach of any of its terms and conditions. Upon termination, You will 
+immediately destroy the Materials or return all copies of the Materials 
+to Intel along with any copies You have made. After termination, the 
+license grant to any Feedback in accordance with the terms and 
+conditions of this Agreement, prior to the effective date of such 
+termination, will survive any such termination of this Agreement as will 
+the obligations under Sections 4, 5, 7, 8, 9, 10, 11, & 12. 
+
+11. U.S. GOVERNMENT RESTRICTED RIGHTS: The technical data and computer 
+software covered by this license is a "Commercial Item," as such term is 
+defined by the FAR 2.101 (48 C.F.R. 2.101) and is "commercial computer 
+software" and "commercial computer software documentation" as specified 
+under FAR 12.212 (48 C.F.R. 12.212) or DFARS 227.7202 (48 C.F.R. 
+227.7202), as applicable. This commercial computer software and related 
+documentation is provided to end users for use by and on behalf of the 
+U.S. Government, with only those rights as are granted to all other end 
+users pursuant to the terms and conditions herein. Use for or on behalf 
+of the U.S. Government is permitted only if the party acquiring or using 
+this software is properly authorized by an appropriate U.S. Government 
+official. This use by or for the U.S. Government clause is in lieu of, 
+and supersedes, any other FAR, DFARS, or other provision that addresses 
+Government rights in the computer software or documentation covered by 
+this license. All copyright licenses granted to the U.S. Government are 
+coextensive with the technical data and computer software licenses 
+granted herein. The U.S. Government will only have the right to 
+reproduce, distribute, perform, display, and prepare derivative works as 
+needed to implement those rights.
+
+12. APPLICABLE LAWS: All disputes arising out of or related to this 
+Agreement, whether based on contract, tort, or any other legal or 
+equitable theory, will in all respects be governed by, and construed and 
+interpreted under, the laws of the United States of America and the 
+State of Delaware, without reference to conflict of laws principles. The 
+parties agree that the United Nations Convention on Contracts for the 
+International Sale of Goods (1980) is specifically excluded from and 
+will not apply to this Agreement. All disputes arising out of or related 
+to this Agreement, whether based on contract, tort, or any other legal 
+or equitable theory, will be subject to the exclusive jurisdiction of 
+the courts of the State of Delaware or of the Federal courts sitting in 
+that State. Each party submits to the personal jurisdiction of those 
+courts and waives all objections to that jurisdiction and venue for 
+those disputes.
+
+13. SEVERABILITY: The parties intend that if a court holds that any 
+provision or part of this Agreement is invalid or unenforceable under 
+applicable law, the court will modify the provision to the minimum 
+extent necessary to make it valid and enforceable, or if it cannot be 
+made valid and enforceable, the parties intend that the court will sever 
+and delete the provision or part from this Agreement. Any change to or 
+deletion of a provision or part of this Agreement under this Section 
+will not affect the validity or enforceability of the remainder of this 
+Agreement, which will continue in full force and effect.
+
+14. EXPORT: You must comply with all laws and regulations of the United 
+States and other countries governing the export, re-export, import, 
+transfer, distribution, use, and servicing of Software. In particular, 
+You must not: (a) sell or transfer Software to a country subject to 
+sanctions, or to any entity listed on a denial order published by the 
+United States government or any other relevant government; or (b) use, 
+sell, or transfer Software for the development, design, manufacture, or 
+production of nuclear, missile, chemical or biological weapons, or for 
+any other purpose prohibited by the United States government or other 
+applicable government; without first obtaining all authorizations 
+required by all applicable laws. For more details on Your export 
+obligations, please visit 
+http://www.intel.com/content/www/us/en/legal/export-compliance.html.
+
+15. NO ASSIGNMENT, NO SUBLICENSE, NO TRANSFER: You may not delegate, 
+assign or transfer this Agreement, or any of Your rights and obligations 
+under this Agreement, whether by contract, operation of law, change of 
+control, acquisition, forward or reverse merger, consolidation, sale of 
+all or substantially all of Your outstanding shares or assets, other 
+changes in control, or any other event, and any attempt to do so will be 
+a material breach of this Agreement and will be null and void. In 
+addition, You may not sublicense, assign or transfer any of the 
+Materials, Confidential Information or any part of the foregoing, nor 
+any right in this Agreement, whether by contract, operation of law, 
+change of control, acquisition, forward or reverse merger, 
+consolidation, sale of all or substantially all of a party’s 
+outstanding shares or assets, other changes in control, or any other 
+event, to any third party temporarily (such as loaning, rental, 
+licensing or timeshare) or permanently, except as expressly permitted 
+under Section 2, without the prior written consent of Intel in each 
+instance which consent Intel may withhold in its sole discretion. Any 
+attempted sublicense, assignment or transfer that is not expressly 
+permitted under Section 2 or is without consent will be a material 
+breach of this Agreement and will be null and void. Subject to the other 
+provisions of this Section this Agreement will bind and inure to the 
+benefit of the parties and their permitted successors and assigns.
+
+16. ENTIRE AGREEMENT: This Agreement contains the complete and exclusive 
+agreement and understanding between the parties concerning the subject 
+matter of this Agreement, and supersedes all prior and contemporaneous 
+proposals, agreements, understanding, negotiations, representations, 
+warranties, conditions, and communications, oral or written, between the 
+parties relating to the same subject matter. No modification or 
+amendment to this Agreement will be effective unless in writing and 
+signed by authorized representatives of each party, and must 
+specifically identify this Agreement.

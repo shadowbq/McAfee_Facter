@@ -1,0 +1,76 @@
+﻿Usage:  EEDK.exe [options | -Settings:<settingsFile>] [-GUI] [-GenPass:"<ClearPassword>"]
+        (Options supported on Enterprise Edition only)
+
+ -Settings:"C:\temp\settings.eedk"       :path of the Settings (.eedk) file
+
+[-GUI]                                   :load settings or parameters into form
+
+[-GenPass:"<ClearPassword>"]             :generate encrypted password
+
+Options:
+[-File:<path> | -Folder:<path>]          :path of the Source file or folder
+
+     Examples (cannot be both):
+       -File:"C:\My Documents\ePO\PackageFile.cmd"
+       -Folder:"C:\My Documents\ePO\My Package"
+
+ -Build:"C:\My Documents\ePO\Build"      :build folder
+
+ -ProdName:SAMPLAPP                      :8-character product name
+ -ProdID:1000                            :4-digit product ID
+ -ProdVer:1.2.3[.4]                      :3-4 digit format 1.2.3[.4]
+
+ -Install:"Command.exe /a /b /c"         :install command to run
+
+ -Platform:"W2KS|W2KAS|W2KDC|WXPS|WVSTS" :operating systems (must be "Quoted")
+
+           "W2KW"                        :Windows 2000 Workstation
+           "WXPHE|WXPW"                  :Windows XP
+           "WXPE"                        :Windows XP Embedded
+           "WVST"                        :Windows Vista
+           "WNT7W"                       :Windows 7
+           "WIN8W"                       :Windows 8
+		   "WINXW"                       :Windows 10 Workstation
+           "W2KS|W2KAS|W2KDC"            :Windows Server 2000
+           "WXPS"                        :Windows Server 2003
+           "WVSTS"                       :Windows Server 2008
+           "WIN8S"                       :Windows Server 2012
+		   "WINXS"                       :Windows 10 Server
+           "MAC"                         :Macintosh
+           "LINUX"                       :Linux
+           "AIX"                         :AIX
+           "HPUX|HPIA"                   :HP-UX
+           "SLR"                         :Solaris
+
+
+[-ProdDesc:"Product Description"]        :product description
+[-Uninstall:"uninstallme.exe /q"]        :uninstall command
+[-DetKey:"HKLM\Software\EEDK\SampleApp"] :product detection key
+[-DetValue:"Value123"]                   :product detection value
+[-RebootCode:3010]                       :reboot return code
+
+Package Upload Options:                 (Supported ONLY in ePO 4.6)
+
+ -CheckIn:[Current|"<path>"]             :location of .zip to upload
+ -ePOServer:<Host:Port>                  :host:port of ePO server
+ -ePOUser:<UserID>                       :userID of ePO logon
+ -ePOPassword:"<EncryptedPassword>"      :encrypted ePO Password
+                                         :use -GenPass:"<ClearPassword>"
+
+[-ePOTimeout:<sec>]                      :default 10, 0 < ePOTimeout <= 120
+[-ePOTest:[true|false]]                  :test ePO upload with NULL00000000.zip
+[-Proxy:[true|false]]                    :use system proxy, default false
+[-Branch:[Current|Previous|Evaluation]]  :default Current
+[-Option:[Normal|/superdat|/extradat]]   :default Normal
+[-Overwrite:[true|false]]                :force overwrite existing, default true
+[-Unsigned:[true|false]]                 :allow unsigned packages, default true
+
+[-Log:"<path>"]                          :output log path, default ".\EEDK.log"
+[-MCSTemplate:"<path>"]                  :path to Custom MCSTemplate.ini file
+[-v]                                     :version
+[-help]                                  :this usage
+
+Note: Any parameter with a space MUST be "Quoted"
+      All parameters SHOULD be quoted
+      -Platform: MUST be "Quoted"
+      Community Edition does not support Command Line.
