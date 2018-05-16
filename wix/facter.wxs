@@ -16,8 +16,11 @@
             <Directory Id="ProgramFilesFolder" Name="PFiles">
                 <Directory Id="McAfee" Name="McAfee">
                     <Directory Id="FACTER" Name="Facter">
-                        <Component Id="RegistryEntries" Guid="257F9522-32B3-6824-A602-BADBEEFCD9B9">                        
-                             <RegistryValue Root="HKLM" Key="Software\McAfee\Facter" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                        <Component Id="RegistryEntries" Guid="257F9522-32B3-6824-A602-BADBEEFCD9B9">
+				 <RegistryKey Root="HKLM" Key="Software\McAfee\Facter" Action="createAndRemoveOnUninstall">                                  
+				    <RegistryValue Type="integer" Name="installed" Value="1" KeyPath="yes"/>
+            			    <RegistryValue Type="string" Name="location" Value="ProgramFiles\McAfee\Facter"/>
+        		  	</RegistryKey> 
                         </Component>
                         <Component Id="FACTER.EXE" DiskId="1" Guid="3974C9D1-B0DC-41B4-AD33-DBDB93C224E0">
                             <File Id="FACTER.EXE" Name="facter.exe" Source="..\vendor\facter\facter.exe" />
