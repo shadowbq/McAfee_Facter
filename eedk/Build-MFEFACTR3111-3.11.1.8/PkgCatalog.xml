@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PkgCatalog Version="20180516141014">
+<PkgCatalog Version="20180518190408">
 	<ProductPackage>
 		<ProductID>MFEFACTR3111</ProductID>
-		<ProductName>McAfee Facter </ProductName>
+		<ProductName>McAfee Facter</ProductName>
 		<ProductDescription>0</ProductDescription>
-		<ProductDetection Version="20180516141014">
+		<ProductDetection Version="20180518190408">
 			<DetectionScript>
 				<Name>MFEFACTR3111-det.mcs</Name>
-				<Size>2612</Size><DateTime>1D3ED1F9C6F8640</DateTime><Hash>C1089473F780FA94BC1E2DE13A14CA469262F4A9</Hash></DetectionScript>
+				<Size>2580</Size><DateTime>1D3EEDAFFB17EE0</DateTime><Hash>B6AFD3E034FCF8E88844C47A810B71674518DD85</Hash></DetectionScript>
 			<ProductVersion>3.11.1.8</ProductVersion>
 			<PlatformID>W2KAS|W2KDC|W2KS|W2KW|WIN8S|WIN8W|WINXS|WINXW|WNT7W|WVST|WVSTS|WXPE|WXPHE|WXPS|WXPW</PlatformID>
 		</ProductDetection>
@@ -17,10 +17,10 @@
 			<PackageType>Install</PackageType>
 			<LangID>0000</LangID>
 			<InstallType>command</InstallType>
-			<InstallCommand>msiexec.exe /i facter.msi /passive /qn</InstallCommand>
+			<InstallCommand>package.bat</InstallCommand>
 			<MaxReboot>1</MaxReboot>
 			<RebootReturnCode>3010</RebootReturnCode>
-			<FileList><FileItem><Name>facter.msi</Name><Size>5500928</Size><DateTime>1D3ED1F2BA4DC30</DateTime><Hash>B8ABBC9B4A67F49C49393B423BC7BFA7CD8323D4</Hash></FileItem></FileList><TotalSize>5372</TotalSize></LangPackage>
+			<FileList><FileItem><Name>facter.msi</Name><Size>5500928</Size><DateTime>1D3ED1BF3C61020</DateTime><Hash>B8ABBC9B4A67F49C49393B423BC7BFA7CD8323D4</Hash></FileItem><FileItem><Name>package.bat</Name><Size>814</Size><DateTime>1D3EEDA2867AA40</DateTime><Hash>7343E66C21A218C8B69F5CC42D5113714C9E077E</Hash></FileItem></FileList><TotalSize>5372</TotalSize></LangPackage>
 		<Translation>
 			<TranslationID/>
 			<TranslationItem>

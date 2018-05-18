@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
-Generated: 5/16/2018 10:10:15 AM
+Generated: 5/18/2018 3:04:11 PM
 EEDK.exe
--Build:"C:\sandbox\eedk" -File:"C:\Users\podadmin.POD\Downloads\facter.msi" -ProdName:"MFEFACTR" -ProdID:"3111" -ProdVer:"3.11.1.8" -ProdDesc:"McAfee Facter " -Install:"msiexec.exe /i facter.msi /passive /qn" -Uninstall:"msiexec.exe /x {C93DC4BF-D45E-40E4-A1D6-8467250E2AFB}" -DetKey:"HKLM\Software\McAfee\Facter" -DetValue:"INSTALLED" -Reboot:"3010" -Platform:"W2KAS|W2KDC|W2KS|W2KW|WIN8S|WIN8W|WINXS|WINXW|WNT7W|WVST|WVSTS|WXPE|WXPHE|WXPS|WXPW" 
+-Build:"C:\tools\mfe-facter-repo\eedk" -Folder:"C:\tools\mfe-facter-repo\builds" -ProdName:"MFEFACTR" -ProdID:"3111" -ProdVer:"3.11.1.8" -ProdDesc:"McAfee Facter" -Install:"package.bat" -Uninstall:"package.bat uninstall" -DetKey:"HKLM\Software\McAfee\Facter" -DetValue:"INSTALLED" -Reboot:"3010" -Platform:"W2KAS|W2KDC|W2KS|W2KW|WIN8S|WIN8W|WINXS|WINXW|WNT7W|WVST|WVSTS|WXPE|WXPHE|WXPS|WXPW" 
 -->
 <ePO.Endpoint.Deployment.Kit.Settings>
-  <File>true</File>
-  <Folder>false</Folder>
-  <SourcePackages>C:\Users\podadmin.POD\Downloads\facter.msi</SourcePackages>
-  <BuildFolder>C:\sandbox\eedk</BuildFolder>
+  <File>false</File>
+  <Folder>true</Folder>
+  <SourcePackages>C:\tools\mfe-facter-repo\builds</SourcePackages>
+  <BuildFolder>C:\tools\mfe-facter-repo\eedk</BuildFolder>
   <ProductName>MFEFACTR</ProductName>
   <ProductID>3111</ProductID>
-  <ProductDescription>McAfee Facter </ProductDescription>
+  <ProductDescription>McAfee Facter</ProductDescription>
   <ProductVersion>3.11.1.8</ProductVersion>
-  <InstallCommand>msiexec.exe /i facter.msi /passive /qn</InstallCommand>
+  <InstallCommand>package.bat</InstallCommand>
   <DetectionKey>HKLM\Software\McAfee\Facter</DetectionKey>
   <DetectionValue>INSTALLED</DetectionValue>
   <LocationKey>HKLM\Software\McAfee\Facter</LocationKey>
   <LocationValue>INSTALLED</LocationValue>
-  <UninstallCommand>msiexec.exe /x {C93DC4BF-D45E-40E4-A1D6-8467250E2AFB}</UninstallCommand>
+  <UninstallCommand>package.bat uninstall</UninstallCommand>
   <RebootReturnCode>3010</RebootReturnCode>
   <OSTypes>
     <OSType>
@@ -125,7 +125,7 @@ SetGlobal       gPointProductDetectionKey = HKLM\Software\McAfee\Facter
 SetGlobal       gPointProductDetectionValue = INSTALLED
 SetGlobal       gPointProductLocationKey = HKLM\Software\McAfee\Facter
 SetGlobal       gPointProductLocationValue = INSTALLED
-SetGlobal       gCustomUninstallString = msiexec.exe /x {C93DC4BF-D45E-40E4-A1D6-8467250E2AFB}
+SetGlobal       gCustomUninstallString = package.bat uninstall
 SetGlobal       INSTALLED = 1
 SetGlobal       NOTINSTALLED = 0
 SetGlobal       UpdateError = -1
