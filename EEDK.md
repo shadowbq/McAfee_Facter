@@ -1,33 +1,23 @@
 # Installing the MSI from EPO using EEDK
 
+## Facter for EPO
+
+The MSI build provided from the repo can be installed as a package for McAfee EPO.
+
+THe installation on the downstream McAfee Managed Endpoints can be summarized:
+
+1. Upload the `*.zip` file created by the EEDK builder to EPO server by adding a new package to the `EPO Repository`
+2. Assign a new client task (McAfee Agent -> Product Deployment -> New Task) to the target endpoints.
+3. Wait for the client to finish installation. This can be monitored on the endpoint within the Agent UI. 
+
+![Screenshot](meta/eedk-batched.png?raw=true "Screenshot")
+
 ## Batch wrapper for EEDK to run msiexec
 
-```bat
-@echo off:: Get number of input parameters
-set argC=0
-for %%x in (%*) doSet /A argC+=1
-:: ################################################
-:: Set environment to current product folder
-pushd "%~dp0"
-:: Get software package source directory and set as variable 
-SRCDIRSET SRCDIR=
-for /f "delims=" %%a in ('cd') do @set SRCDIR=%%a
-if %argC%==0 GOTO INSTALL
-if %1==uninstall GOTO UNINSTALL
+Attempting to run msiexec directly seems to fail, and best practice guide for EEDK recommends adding a batch file wrapper to execute the msiexec installation.
 
-:INSTALL
-%comspec% /c %systemroot%\system32\msiexec.exe /i "%SRCDIR%\McProfilerSetup.msi" /quiet
-GOTO END
+## Troubleshooting
 
-:UNINSTALL
-%comspec% /c %systemroot%\system32\MsiExec.exe /X{McProfilerSetup.msi} /quiet
+You may see a failed package like this..
 
-:END
-GOTO EOF
-
-:: Exit and pass proper exit to agent
-:: ################################################
-
-:EOF
-Exit /B 0
-```
+![Screenshot](meta/failed-eedk-facter.png?raw=true "Screenshot")
