@@ -1,0 +1,169 @@
+[ {
+  "item" : {
+    "catalogVersion" : 1,
+    "dbVersion" : 2,
+    "id" : "5b0315bbe4b0592337f1297b",
+    "name" : "Facter",
+    "description" : "",
+    "type" : "CUSTOM",
+    "contents" : [ {
+      "platform" : {
+        "catalogVersion" : 220269,
+        "dbVersion" : 2,
+        "id" : "58efec8ee4b0c390d69a8e0f",
+        "name" : "linux",
+        "topic" : "/mcafee/mar/agent/query/linux",
+        "enabled" : true
+      },
+      "capability" : {
+        "catalogVersion" : 220269,
+        "dbVersion" : 2,
+        "id" : "58efec8ee4b0c390d69a8e51",
+        "name" : "NotAvailable",
+        "description" : "Capability not available",
+        "module" : "Internal",
+        "function" : "GetFalseResult",
+        "contentEnabled" : false,
+        "arguments" : [ ],
+        "outputs" : [ ],
+        "formatArgs" : { },
+        "format" : "BIN",
+        "platforms" : [ {
+          "catalogVersion" : 220269,
+          "dbVersion" : 2,
+          "id" : "58efec8ee4b0c390d69a8e0e",
+          "name" : "windows",
+          "topic" : "/mcafee/mar/agent/query/windows",
+          "enabled" : true
+        }, {
+          "catalogVersion" : 220269,
+          "dbVersion" : 2,
+          "id" : "58efec8ee4b0c390d69a8e0f",
+          "name" : "linux",
+          "topic" : "/mcafee/mar/agent/query/linux",
+          "enabled" : true
+        } ],
+        "platformSettings" : [ ],
+        "itemType" : "BUILTIN",
+        "catalogItems" : [ ]
+      },
+      "content" : null,
+      "arguments" : null,
+      "utf8Sensitive" : false
+    }, {
+      "platform" : {
+        "catalogVersion" : 220269,
+        "dbVersion" : 2,
+        "id" : "5a1a45c9e4b0401274ab7141",
+        "name" : "macos",
+        "topic" : "/mcafee/mar/agent/query/macos",
+        "enabled" : true
+      },
+      "capability" : {
+        "catalogVersion" : 220269,
+        "dbVersion" : 2,
+        "id" : "58efec8ee4b0c390d69a8e51",
+        "name" : "NotAvailable",
+        "description" : "Capability not available",
+        "module" : "Internal",
+        "function" : "GetFalseResult",
+        "contentEnabled" : false,
+        "arguments" : [ ],
+        "outputs" : [ ],
+        "formatArgs" : { },
+        "format" : "BIN",
+        "platforms" : [ {
+          "catalogVersion" : 220269,
+          "dbVersion" : 2,
+          "id" : "58efec8ee4b0c390d69a8e0e",
+          "name" : "windows",
+          "topic" : "/mcafee/mar/agent/query/windows",
+          "enabled" : true
+        }, {
+          "catalogVersion" : 220269,
+          "dbVersion" : 2,
+          "id" : "58efec8ee4b0c390d69a8e0f",
+          "name" : "linux",
+          "topic" : "/mcafee/mar/agent/query/linux",
+          "enabled" : true
+        } ],
+        "platformSettings" : [ ],
+        "itemType" : "BUILTIN",
+        "catalogItems" : [ ]
+      },
+      "content" : null,
+      "arguments" : null,
+      "utf8Sensitive" : false
+    }, {
+      "platform" : {
+        "catalogVersion" : 220269,
+        "dbVersion" : 2,
+        "id" : "58efec8ee4b0c390d69a8e0e",
+        "name" : "windows",
+        "topic" : "/mcafee/mar/agent/query/windows",
+        "enabled" : true
+      },
+      "capability" : {
+        "catalogVersion" : 220269,
+        "dbVersion" : 2,
+        "id" : "58efec8ee4b0c390d69a8e61",
+        "name" : "Execute PowerShell Script",
+        "description" : "Runs Windows PowerShell Scripts",
+        "module" : "SystemRuntime",
+        "function" : "executePS",
+        "contentEnabled" : true,
+        "arguments" : [ ],
+        "outputs" : [ ],
+        "formatArgs" : {
+          "hasHeaders" : false,
+          "delimiter" : ","
+        },
+        "format" : "CSV",
+        "platforms" : [ {
+          "catalogVersion" : 220269,
+          "dbVersion" : 2,
+          "id" : "58efec8ee4b0c390d69a8e0e",
+          "name" : "windows",
+          "topic" : "/mcafee/mar/agent/query/windows",
+          "enabled" : true
+        } ],
+        "platformSettings" : [ {
+          "platform" : {
+            "catalogVersion" : 220269,
+            "dbVersion" : 2,
+            "id" : "58efec8ee4b0c390d69a8e0e",
+            "name" : "windows",
+            "topic" : "/mcafee/mar/agent/query/windows",
+            "enabled" : true
+          },
+          "utf8Sensitive" : false
+        } ],
+        "itemType" : "CUSTOM",
+        "catalogItems" : [ "COLLECTOR", "REACTION" ]
+      },
+      "content" : "#\n# https://blogs.technet.microsoft.com/heyscriptingguy/2015/06/11/table-of-basic-powershell-commands/\n#\n# Add ImportCSV for a table style output\n#{\n#    ipcsv $csv -Header 'Tier name','Raid Type','UCap','ConCap','AvCap','%Sub','Higher','Lower'|\n#        select -Skip 1|\n#        ft -AutoSize\n#}\n\n$f=\"$env:TMP\\facter-$pid.yaml\"\n\n& 'C:\\Program Files\\McAfee\\Facter\\facter.exe' -y --no-ruby networking.dhcp, networking.netmask networking.primary > $f\n\nGet-Content $f | %{\n    $csv=\"$env:TMP\\facter-$pid.csv\"\n    Clear-Content $csv -ea Ignore\n    ${#items}=3\n    $o=[pscustomobject]@{}\n}{\n    $splitted=$_-split': '\n    if($splitted){\n        $o|Add-Member $splitted[0] $splitted[1]\n        if(($o.psobject.properties.count|measure -sum).count -eq ${#items}){\n            $o|\tExport-Csv $csv -Append -NoTypeInformation\n            $o=[pscustomobject]@{}\n        }\n    }\n}{ Get-Content $csv | select -Skip 1 }",
+      "arguments" : null,
+      "utf8Sensitive" : false
+    } ],
+    "outputs" : [ {
+      "id" : "5b0315bbe4b0592337f12978",
+      "name" : "dhcp",
+      "type" : "STRING",
+      "byDefault" : false,
+      "sequence" : 1
+    }, {
+      "id" : "5b0315bbe4b0592337f12979",
+      "name" : "netmask",
+      "type" : "STRING",
+      "byDefault" : false,
+      "sequence" : 2
+    }, {
+      "id" : "5b0315bbe4b0592337f1297a",
+      "name" : "primary",
+      "type" : "STRING",
+      "byDefault" : false,
+      "sequence" : 3
+    } ]
+  },
+  "type" : "com.intel.mar.model.collector.Collector"
+} ]

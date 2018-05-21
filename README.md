@@ -233,6 +233,14 @@ Note: The ProductID will change with each new version of the MSI.
 
 This is a community tool orginally written by PuppetLabs and is distributed "as is" while licensed under the Apache 2.0 License. McAfee does not, and will not provide support for this tool. 
 
+## Using Facter within McAfee Active Response
+
+MFE Facter can be used just like any program in the McAfee EDR Tool MAR. There is a powershell script to transpose the `yaml` output of *multiline explicit facter* request to `csv`.
+
+You must list the number of columns you want for your collector, modify it, and upload it to EPO MAR Response Catalog.
+
+![Screenshot](meta/MAR-Facter.png?raw=true "Screenshot")
+
 ## Puppet Labs Reference
 
 * https://github.com/puppetlabs/facter
