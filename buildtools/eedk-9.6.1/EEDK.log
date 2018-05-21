@@ -1,40 +1,22 @@
-[5/18/2018 2:42 PM] ePO Endpoint Deployment Kit: 9.6.1 (Enterprise Edition)
-[5/18/2018 2:42 PM] Form Loaded from parameters.
-[5/18/2018 2:46 PM] Populating eedkSettings.
-[5/18/2018 2:46 PM] eedkSettings Validated
-[5/18/2018 2:46 PM] Building package.
-[5/18/2018 2:46 PM] Creating Build Folder: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8"
-[5/18/2018 2:46 PM] Copying Source: "C:\tools\mfe-facter-repo\builds" to Build: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8
-[5/18/2018 2:46 PM] Copying: facter.msi, package.bat
-[5/18/2018 2:46 PM] Creating PkgCatalog: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\PkgCatalog.xml"
-[5/18/2018 2:46 PM] Creating MCS file: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\MFEFACTR3111-det.mcs"
-[5/18/2018 2:46 PM] Running: C:\tools\mfe-facter-repo\buildtools\eedk-9.6.1\ePOSign.exe "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\PkgCatalog.xml" .mcs /a
-[5/18/2018 2:46 PM] ePOSign Complete: Exit Code=0
-[5/18/2018 2:46 PM] Creating EEDK settings file: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\MFEFACTR3111.eedk"
-[5/18/2018 2:46 PM] Package exists, overwriting: C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
-[5/18/2018 2:46 PM] Zipping Package: C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
-[5/18/2018 2:46 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\PkgCatalog.z
-[5/18/2018 2:46 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\MFEFACTR3111-det.mcs
-[5/18/2018 2:46 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\facter.msi
-[5/18/2018 2:46 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\package.bat
-[5/18/2018 2:46 PM] Build Complete:C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
-[5/18/2018 3:04 PM] Populating eedkSettings.
-[5/18/2018 3:04 PM] eedkSettings Validated
-[5/18/2018 3:04 PM] Building package.
-[5/18/2018 3:04 PM] Creating Build Folder: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8"
-[5/18/2018 3:04 PM] Copying Source: "C:\tools\mfe-facter-repo\builds" to Build: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8
-[5/18/2018 3:04 PM] Copying: facter.msi, package.bat
-[5/18/2018 3:04 PM] Creating PkgCatalog: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\PkgCatalog.xml"
-[5/18/2018 3:04 PM] Creating MCS file: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\MFEFACTR3111-det.mcs"
-[5/18/2018 3:04 PM] Running: C:\tools\mfe-facter-repo\buildtools\eedk-9.6.1\ePOSign.exe "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\PkgCatalog.xml" .mcs /a
-[5/18/2018 3:04 PM] ePOSign Complete: Exit Code=0
-[5/18/2018 3:04 PM] Creating EEDK settings file: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\MFEFACTR3111.eedk"
-[5/18/2018 3:04 PM] Package exists, overwriting: C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
-[5/18/2018 3:04 PM] Zipping Package: C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
-[5/18/2018 3:04 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\PkgCatalog.z
-[5/18/2018 3:04 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\MFEFACTR3111-det.mcs
-[5/18/2018 3:04 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\facter.msi
-[5/18/2018 3:04 PM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.8\package.bat
-[5/18/2018 3:04 PM] Build Complete:C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
-[5/18/2018 3:13 PM] Form Closing
-[5/18/2018 3:13 PM] Exit (0)
+[5/21/2018 10:48 AM] ePO Endpoint Deployment Kit: 9.6.1 (Enterprise Edition)
+[5/21/2018 10:48 AM] Form Loaded from parameters.
+[5/21/2018 10:49 AM] Populating eedkSettings.
+[5/21/2018 10:49 AM] eedkSettings Validated
+[5/21/2018 10:49 AM] Building package.
+[5/21/2018 10:49 AM] Creating Build Folder: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9"
+[5/21/2018 10:49 AM] Copying Source: "C:\tools\mfe-facter-repo\builds" to Build: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9
+[5/21/2018 10:49 AM] Copying: facter.msi, package.bat
+[5/21/2018 10:49 AM] Creating PkgCatalog: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\PkgCatalog.xml"
+[5/21/2018 10:49 AM] Creating MCS file: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\MFEFACTR3111-det.mcs"
+[5/21/2018 10:49 AM] Running: C:\tools\mfe-facter-repo\buildtools\eedk-9.6.1\ePOSign.exe "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\PkgCatalog.xml" .mcs /a
+[5/21/2018 10:49 AM] ePOSign Complete: Exit Code=0
+[5/21/2018 10:49 AM] Creating EEDK settings file: "C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\MFEFACTR3111.eedk"
+[5/21/2018 10:49 AM] Package exists, overwriting: C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
+[5/21/2018 10:49 AM] Zipping Package: C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
+[5/21/2018 10:49 AM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\PkgCatalog.z
+[5/21/2018 10:49 AM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\MFEFACTR3111-det.mcs
+[5/21/2018 10:49 AM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\facter.msi
+[5/21/2018 10:49 AM] Adding: C:\tools\mfe-facter-repo\eedk\Build-MFEFACTR3111-3.11.1.9\package.bat
+[5/21/2018 10:49 AM] Build Complete:C:\tools\mfe-facter-repo\eedk\MFEFACTR3111.zip
+[5/21/2018 10:49 AM] Form Closing
+[5/21/2018 10:49 AM] Exit (0)

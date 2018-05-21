@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Generated: 5/21/2018 10:49:11 AM
+EEDK.exe
+-Build:"C:\tools\mfe-facter-repo\eedk" -Folder:"C:\tools\mfe-facter-repo\builds" -ProdName:"MFEFACTR" -ProdID:"3111" -ProdVer:"3.11.1.9" -ProdDesc:"McAfee Facter" -Install:"package.bat" -Uninstall:"package.bat uninstall" -DetKey:"HKLM\Software\McAfee\Facter" -DetValue:"INSTALLED" -Reboot:"3010" -Platform:"W2KAS|W2KDC|W2KS|W2KW|WIN8S|WIN8W|WINXS|WINXW|WNT7W|WVST|WVSTS|WXPE|WXPHE|WXPS|WXPW" 
+-->
+<ePO.Endpoint.Deployment.Kit.Settings>
+  <File>false</File>
+  <Folder>true</Folder>
+  <SourcePackages>C:\tools\mfe-facter-repo\builds</SourcePackages>
+  <BuildFolder>C:\tools\mfe-facter-repo\eedk</BuildFolder>
+  <ProductName>MFEFACTR</ProductName>
+  <ProductID>3111</ProductID>
+  <ProductDescription>McAfee Facter</ProductDescription>
+  <ProductVersion>3.11.1.9</ProductVersion>
+  <InstallCommand>package.bat</InstallCommand>
+  <DetectionKey>HKLM\Software\McAfee\Facter</DetectionKey>
+  <DetectionValue>INSTALLED</DetectionValue>
+  <LocationKey>HKLM\Software\McAfee\Facter</LocationKey>
+  <LocationValue>INSTALLED</LocationValue>
+  <UninstallCommand>package.bat uninstall</UninstallCommand>
+  <RebootReturnCode>3010</RebootReturnCode>
+  <OSTypes>
+    <OSType>
+      <Name>Windows (All Versions)</Name>
+      <Type>W2KW|WXPHE|WXPW|WXPE|WVST|WNT7W|W2KS|W2KAS|W2KDC|WXPS|WVSTS|WIN8W|WIN8S|WINXW|WINXS</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows 2000 Workstation</Name>
+      <Type>W2KW</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows XP</Name>
+      <Type>WXPHE|WXPW</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows XP Embedded</Name>
+      <Type>WXPE</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows Vista</Name>
+      <Type>WVST</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows 7</Name>
+      <Type>WNT7W</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows 8</Name>
+      <Type>WIN8W</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows 10</Name>
+      <Type>WINXW</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows Server 2000</Name>
+      <Type>W2KS|W2KAS|W2KDC</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows Server 2003</Name>
+      <Type>WXPS</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows Server 2008</Name>
+      <Type>WVSTS</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows Server 2012</Name>
+      <Type>WIN8S</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Windows 10 Server</Name>
+      <Type>WINXS</Type>
+      <Selected>true</Selected>
+    </OSType>
+    <OSType>
+      <Name>Macintosh</Name>
+      <Type>MAC</Type>
+      <Selected>false</Selected>
+    </OSType>
+    <OSType>
+      <Name>Linux</Name>
+      <Type>LINUX</Type>
+      <Selected>false</Selected>
+    </OSType>
+    <OSType>
+      <Name>AIX</Name>
+      <Type>AIX</Type>
+      <Selected>false</Selected>
+    </OSType>
+    <OSType>
+      <Name>HP-UX</Name>
+      <Type>HPUX|HPIA</Type>
+      <Selected>false</Selected>
+    </OSType>
+    <OSType>
+      <Name>Solaris</Name>
+      <Type>SLR</Type>
+      <Selected>false</Selected>
+    </OSType>
+  </OSTypes>
+  <MCSTemplate>;*********************************
+;Torry Campbell McAfee Inc.
+;August 2010
+;August 2011: e^2
+
+;All rights reseverved
+;*********************************
+
+[InitializeVariables]
+SetGlobal       gPointProductDetectionKey = HKLM\Software\McAfee\Facter
+SetGlobal       gPointProductDetectionValue = INSTALLED
+SetGlobal       gPointProductLocationKey = HKLM\Software\McAfee\Facter
+SetGlobal       gPointProductLocationValue = INSTALLED
+SetGlobal       gCustomUninstallString = package.bat uninstall
+SetGlobal       INSTALLED = 1
+SetGlobal       NOTINSTALLED = 0
+SetGlobal       UpdateError = -1
+SetGlobal       REBOOT_NOW = 0
+
+[ScriptMain]
+ReportStatus    Called ScriptMain
+Call            InitializeVariables
+Return          %%INSTALLED%%
+
+[IsProductInstalled]
+Call            InitializeVariables
+FindRegValue    bRet = %%gPointProductDetectionKey%%, %%gPointProductDetectionValue%%
+SetGlobal       gInstalledProductProduct = FALSE
+ReturnIf        %%bRet%% == FALSE, %%NOTINSTALLED%%
+SetGlobal       gInstalledProductProduct = %%szPointProductName%%
+Return          %%INSTALLED%%
+
+[GetUninstallCommand]
+Call            bRet = IsProductInstalled
+ReturnIf        %%bRet%% == %%NOTINSTALLED%%, %%NOTINSTALLED%%
+SetGlobal       gProductUninstallCommand = %%gCustomUninstallString%%
+Return          %%INSTALLED%%
+
+[GetInstalledLanguage]
+SetGlobal       gPointProductInstalledLanguage = FFFF
+Call            bRet = IsProductInstalled
+ReturnIf        %%bRet%% == %%NOTINSTALLED%%, %%NOTINSTALLED%%
+SetGlobal       gPointProductInstalledLanguage = 0000
+Return          %%INSTALLED%%
+
+[GetUninstallRebootReturnCode]
+Call            bRet = IsProductInstalled
+ReturnIf        %%bRet%% == %%NOTINSTALLED%%, %%NOTINSTALLED%%
+SetGlobal       gRebootReturnCode = 3010
+Return          %%INSTALLED%%
+
+[GetInstallDirectory]
+SetGlobal       gPointProductInstallationDirectory = UNKNOWN
+Call            bRet = IsProductInstalled
+ReturnIf        %%bRet%% == %%NOTINSTALLED%%, %%NOTINSTALLED%%
+Set             RegKeyToFind = %%gPointProductLocationKey%%
+Call            bRet = DoesRegKeyExist
+ReturnIf        %%bRet%% == FALSE, %%NOTINSTALLED%%
+Set             szValue = %%gPointProductLocationValue%%
+FindRegValue    bRet = %%RegKeyToFind%%, %%szValue%%
+ReturnIf        %%bRet%% == FALSE, FALSE
+GetRegValue     InstallDirectory = %%RegKeyToFind%%, %%szValue%%
+ReturnIf        %%InstallDirectory%% == FALSE, %%NOTINSTALLED%%
+SetGlobal       gPointProductInstallationDirectory = %%InstallDirectory%%
+Return          %%INSTALLED%%</MCSTemplate>
+</ePO.Endpoint.Deployment.Kit.Settings>

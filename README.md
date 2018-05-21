@@ -173,7 +173,7 @@ https://puppet.com/docs/facter/3.9/custom_facts.html
 ## MSI Build Process
 
 ### Building localized installers from the command line
-The first step in building a localized installer is to compile your WiX sources using candle.exe:
+The first step in building a localized installer is to compile your WiX sources (in `wix` dir) using candle.exe:
 
 ```
 candle.exe -nologo facter.wxs -out facter.wixobj

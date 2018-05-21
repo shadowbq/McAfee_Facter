@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PkgCatalog Version="20180521144911">
+	<ProductPackage>
+		<ProductID>MFEFACTR3111</ProductID>
+		<ProductName>McAfee Facter</ProductName>
+		<ProductDescription>0</ProductDescription>
+		<ProductDetection Version="20180521144911">
+			<DetectionScript>
+				<Name>MFEFACTR3111-det.mcs</Name>
+				<Size>2580</Size><DateTime>1D3F112E1132530</DateTime><Hash>B6AFD3E034FCF8E88844C47A810B71674518DD85</Hash></DetectionScript>
+			<ProductVersion>3.11.1.9</ProductVersion>
+			<PlatformID>W2KAS|W2KDC|W2KS|W2KW|WIN8S|WIN8W|WINXS|WINXW|WNT7W|WVST|WVSTS|WXPE|WXPHE|WXPS|WXPW</PlatformID>
+		</ProductDetection>
+		<ConflictSoftwareList/>
+		<LangPackage>
+			<Priority>1</Priority>
+			<PackageType>Install</PackageType>
+			<LangID>0000</LangID>
+			<InstallType>command</InstallType>
+			<InstallCommand>package.bat</InstallCommand>
+			<MaxReboot>1</MaxReboot>
+			<RebootReturnCode>3010</RebootReturnCode>
+			<FileList><FileItem><Name>facter.msi</Name><Size>7249920</Size><DateTime>1D3F1127EC680C0</DateTime><Hash>ECFBFC7FA52400D92C02D435A5AEC2D748B07832</Hash></FileItem><FileItem><Name>package.bat</Name><Size>814</Size><DateTime>1D3EEDA2867AA40</DateTime><Hash>7343E66C21A218C8B69F5CC42D5113714C9E077E</Hash></FileItem></FileList><TotalSize>7080</TotalSize></LangPackage>
+		<Translation>
+			<TranslationID/>
+			<TranslationItem>
+				<LangID/>
+				<TranslationString/>
+			</TranslationItem>
+		</Translation>
+	</ProductPackage>
+</PkgCatalog>
