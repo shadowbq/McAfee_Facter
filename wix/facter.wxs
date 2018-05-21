@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?define ProductVersion = "3.11.1.8"?>
+<?define ProductVersion = "3.11.1.9"?>
 <?define ProductUpgradeCode = "2BE7A5EC-C3B4-4297-B60E-75D6CED6C95E"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Product Id="*" Name="McAfee Facter" Language="1033" Version="$(var.ProductVersion)" Manufacturer="McAfee, LLC." UpgradeCode="$(var.ProductUpgradeCode)">
@@ -12,7 +12,7 @@
                     <Directory Id="FACTER" Name="Facter">
                         <Directory Id="FACTER_LIB" Name="Lib">
                             <Component Id="CUSTOM.BAT" DiskId="1" Guid="16ABED5C-5CD6-4777-85BC-B06080CF669D" Win64="yes">
-                                <File Id="CUSTOM.BAT" Name="custom.bat" Source="..\vendor\facter\lib\custom.bat" />
+                                <File Id="CUSTOM.BAT" Name="custom.bat" Source="..\src\vendor\puppetlabs\facter\lib\custom.bat" />
                             </Component>
                         </Directory>
                         <Component Id="RegistryEntries" Guid="257F9522-32B3-6824-A602-BADBEEFCD9B9" Win64="yes">
@@ -24,64 +24,75 @@
                             </RegistryKey> 
                         </Component>
                         <Component Id="FACTER.EXE" DiskId="1" Guid="3974C9D1-B0DC-41B4-AD33-DBDB93C224E0" Win64="yes">
-                            <File Id="FACTER.EXE" Name="facter.exe" Source="..\vendor\facter\facter.exe" />
+                            <File Id="FACTER.EXE" Name="facter.exe" Source="..\src\vendor\puppetlabs\facter\facter.exe" />
                         </Component>
                         <Component Id="LICENSE.TXT" DiskId="1" Guid="ABC33BCA-BC11-4F8A-9677-589F22546123" Win64="yes">
-                            <File Id="LICENSE.TXT" Name="license.txt" Source="..\vendor\facter\license.txt" />
+                            <File Id="LICENSE.TXT" Name="license.txt" Source="..\src\vendor\puppetlabs\facter\license.txt" />
                         </Component>
                         <Component Id="LEATHERMAN_CURL.DLL" DiskId="1" Guid="67233BCA-BC11-4F8A-9677-589F225460F3" Win64="yes">
-                            <File Id="LEATHERMAN_CURL.DLL" Name="leatherman_curl.dll" Source="..\vendor\facter\leatherman_curl.dll" />
+                            <File Id="LEATHERMAN_CURL.DLL" Name="leatherman_curl.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_curl.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" DiskId="1" Guid="1A1C6F92-6519-4F59-8FFB-167EB12F7B5C" Win64="yes">
-                            <File Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" Name="leatherman_dynamic_library.dll" Source="..\vendor\facter\leatherman_dynamic_library.dll" />
+                            <File Id="LEATHERMAN_DYNAMIC_LIBRARY.DLL" Name="leatherman_dynamic_library.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_dynamic_library.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_EXECUTION.DLL" DiskId="1" Guid="157F9522-92B3-4824-A602-B4AEBCECD9B9" Win64="yes">
-                            <File Id="LEATHERMAN_EXECUTION.DLL" Name="leatherman_execution.dll" Source="..\vendor\facter\leatherman_execution.dll" />
+                            <File Id="LEATHERMAN_EXECUTION.DLL" Name="leatherman_execution.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_execution.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_FILE_UTIL.DLL" DiskId="1" Guid="810C1E29-D688-4608-A470-92D517211198" Win64="yes">
-                            <File Id="LEATHERMAN_FILE_UTIL.DLL" Name="leatherman_file_util.dll" Source="..\vendor\facter\leatherman_file_util.dll" />
+                            <File Id="LEATHERMAN_FILE_UTIL.DLL" Name="leatherman_file_util.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_file_util.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_JSON_CONTAINER.DLL" DiskId="1" Guid="95445A95-349A-4902-8A14-4C0D4C046ACA" Win64="yes">
-                            <File Id="LEATHERMAN_JSON_CONTAINER.DLL" Name="leatherman_json_container.dll" Source="..\vendor\facter\leatherman_json_container.dll" />
+                            <File Id="LEATHERMAN_JSON_CONTAINER.DLL" Name="leatherman_json_container.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_json_container.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_LOCALE.DLL" DiskId="1" Guid="C1E5F23C-6A37-47A4-908B-869CFF1CFFD8" Win64="yes">
-                            <File Id="LEATHERMAN_LOCALE.DLL" Name="leatherman_locale.dll" Source="..\vendor\facter\leatherman_locale.dll" />
+                            <File Id="LEATHERMAN_LOCALE.DLL" Name="leatherman_locale.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_locale.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_LOGGING.DLL" DiskId="1" Guid="016BFBEF-3CDA-4FC6-86DB-E5B1E7ECA77F" Win64="yes">
-                            <File Id="LEATHERMAN_LOGGING.DLL" Name="leatherman_logging.dll" Source="..\vendor\facter\leatherman_logging.dll" />
+                            <File Id="LEATHERMAN_LOGGING.DLL" Name="leatherman_logging.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_logging.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_NOWIDE.DLL" DiskId="1" Guid="4ECF6ACC-5040-4745-BF54-4227874080F0" Win64="yes">
-                            <File Id="LEATHERMAN_NOWIDE.DLL" Name="leatherman_nowide.dll" Source="..\vendor\facter\leatherman_nowide.dll" />
+                            <File Id="LEATHERMAN_NOWIDE.DLL" Name="leatherman_nowide.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_nowide.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_RUBY.DLL" DiskId="1" Guid="66D53074-440A-4311-9B83-33EED110EA5F" Win64="yes">
-                            <File Id="LEATHERMAN_RUBY.DLL" Name="leatherman_ruby.dll" Source="..\vendor\facter\leatherman_ruby.dll" />
+                            <File Id="LEATHERMAN_RUBY.DLL" Name="leatherman_ruby.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_ruby.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_UTIL.DLL" DiskId="1" Guid="4278292B-7815-4440-8144-762343154F4A" Win64="yes">
-                            <File Id="LEATHERMAN_UTIL.DLL" Name="leatherman_util.dll" Source="..\vendor\facter\leatherman_util.dll" />
+                            <File Id="LEATHERMAN_UTIL.DLL" Name="leatherman_util.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_util.dll" />
                         </Component>
                         <Component Id="LEATHERMAN_WINDOWS.DLL" DiskId="1" Guid="AECDAC23-D0FF-4E3D-960B-B25D45678D27" Win64="yes">
-                            <File Id="LEATHERMAN_WINDOWS.DLL" Name="leatherman_windows.dll" Source="..\vendor\facter\leatherman_windows.dll" />
+                            <File Id="LEATHERMAN_WINDOWS.DLL" Name="leatherman_windows.dll" Source="..\src\vendor\puppetlabs\facter\leatherman_windows.dll" />
                         </Component>
                         <Component Id="LIBCURL_4.DLL" DiskId="1" Guid="E8B636C4-29E1-437E-AFFB-ED1B709F7176" Win64="yes">
-                            <File Id="LIBCURL_4.DLL" Name="libcurl-4.dll" Source="..\vendor\facter\libcurl-4.dll" />
+                            <File Id="LIBCURL_4.DLL" Name="libcurl-4.dll" Source="..\src\vendor\puppetlabs\facter\libcurl-4.dll" />
                         </Component>
                         <Component Id="LIBFACTER.SO" DiskId="1" Guid="5A98D16D-9B4D-46A2-9F93-D51DF0BC1EC3" Win64="yes">
-                            <File Id="LIBFACTER.SO" Name="libfacter.so" Source="..\vendor\facter\libfacter.so" />
+                            <File Id="LIBFACTER.SO" Name="libfacter.so" Source="..\src\vendor\puppetlabs\facter\libfacter.so" />
                         </Component>
                         <Component Id="LIBGCC_S_SEH_1.DLL" DiskId="1" Guid="EAD3BD39-9B10-4ABA-B01E-910ACF65A923" Win64="yes">
-                            <File Id="LIBGCC_S_SEH_1.DLL" Name="libgcc_s_seh-1.dll" Source="..\vendor\facter\libgcc_s_seh-1.dll" />
+                            <File Id="LIBGCC_S_SEH_1.DLL" Name="libgcc_s_seh-1.dll" Source="..\src\vendor\puppetlabs\facter\libgcc_s_seh-1.dll" />
                         </Component>
                         <Component Id="LIBSTDC___6.DLL" DiskId="1" Guid="A4E5E3A6-E9C2-4FFB-96B5-8350B5CC0BA4" Win64="yes">
-                            <File Id="LIBSTDC___6.DLL" Name="libstdc++-6.dll" Source="..\vendor\facter\libstdc++-6.dll" />
+                            <File Id="LIBSTDC___6.DLL" Name="libstdc++-6.dll" Source="..\src\vendor\puppetlabs\facter\libstdc++-6.dll" />
                         </Component>
                         <Component Id="LIBWINPTHREAD_1.DLL" DiskId="1" Guid="32135CC4-E6E5-44E3-9FB9-906380D2A8A3" Win64="yes">
-                            <File Id="LIBWINPTHREAD_1.DLL" Name="libwinpthread-1.dll" Source="..\vendor\facter\libwinpthread-1.dll" />
+                            <File Id="LIBWINPTHREAD_1.DLL" Name="libwinpthread-1.dll" Source="..\src\vendor\puppetlabs\facter\libwinpthread-1.dll" />
                         </Component>
                         <Component Id="SSLEAY32.DLL" DiskId="1" Guid="C3FB893C-B553-4093-B44B-7EFB9AD9A038" Win64="yes">
-                            <File Id="SSLEAY32.DLL" Name="ssleay32.dll" Source="..\vendor\facter\ssleay32.dll" />
+                            <File Id="SSLEAY32.DLL" Name="ssleay32.dll" Source="..\src\vendor\puppetlabs\facter\ssleay32.dll" />
                         </Component>
+                        
+                        <Component Id="LIBCPP-PCP-CLIENT.DLL" DiskId="1" Guid="A73FD917-DE01-43BA-8A27-E612D331A2F4" Win64="yes">
+                            <File Id="LIBCPP-PCP-CLIENT.DLL" Name="libcpp-pcp-client.dll" Source="..\src\vendor\puppetlabs\facter\libcpp-pcp-client.dll" />
+                        </Component>
+                        
+                        <Component Id="LIBEAY32.DLL" DiskId="1" Guid="90350D46-51CF-4363-A658-1FA1DDBA60BF" Win64="yes">
+                            <File Id="LIBEAY32.DLL" Name="libeay32.dll" Source="..\src\vendor\puppetlabs\facter\libeay32.dll" />
+                        </Component>
+                        
+                        
+                        
                         <Component Id="ZLIB1.DLL" DiskId="1" Guid="45EA6A9A-7E02-4B3A-8038-946F5EB4995C" Win64="yes">
-                            <File Id="ZLIB1.DLL" Name="zlib1.dll" Source="..\vendor\facter\zlib1.dll" />
+                            <File Id="ZLIB1.DLL" Name="zlib1.dll" Source="..\src\vendor\puppetlabs\facter\zlib1.dll" />
                         </Component>
                     </Directory>
                 </Directory>
@@ -110,6 +121,8 @@
             <ComponentRef Id="LIBWINPTHREAD_1.DLL" />
             <ComponentRef Id="SSLEAY32.DLL" />
             <ComponentRef Id="ZLIB1.DLL" />
+            <ComponentRef Id="LIBCPP-PCP-CLIENT.DLLL" />
+            <ComponentRef Id="LIBEAY32.DLL" />
             <ComponentRef Id="CUSTOM.BAT" />
         </Feature>
         <UI />
