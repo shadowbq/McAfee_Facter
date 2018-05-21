@@ -80,17 +80,12 @@
                         <Component Id="SSLEAY32.DLL" DiskId="1" Guid="C3FB893C-B553-4093-B44B-7EFB9AD9A038" Win64="yes">
                             <File Id="SSLEAY32.DLL" Name="ssleay32.dll" Source="..\src\vendor\puppetlabs\facter\ssleay32.dll" />
                         </Component>
-                        
-                        <Component Id="LIBCPP-PCP-CLIENT.DLL" DiskId="1" Guid="A73FD917-DE01-43BA-8A27-E612D331A2F4" Win64="yes">
-                            <File Id="LIBCPP-PCP-CLIENT.DLL" Name="libcpp-pcp-client.dll" Source="..\src\vendor\puppetlabs\facter\libcpp-pcp-client.dll" />
+                        <Component Id="LIBCPP_PCP_CLIENT.DLL" DiskId="1" Guid="A73FD917-DE01-43BA-8A27-E612D331A2F4" Win64="yes">
+                            <File Id="LIBCPP_PCP_CLIENT.DLL" Name="libcpp-pcp-client.dll" Source="..\src\vendor\puppetlabs\facter\libcpp-pcp-client.dll" />
                         </Component>
-                        
                         <Component Id="LIBEAY32.DLL" DiskId="1" Guid="90350D46-51CF-4363-A658-1FA1DDBA60BF" Win64="yes">
                             <File Id="LIBEAY32.DLL" Name="libeay32.dll" Source="..\src\vendor\puppetlabs\facter\libeay32.dll" />
                         </Component>
-                        
-                        
-                        
                         <Component Id="ZLIB1.DLL" DiskId="1" Guid="45EA6A9A-7E02-4B3A-8038-946F5EB4995C" Win64="yes">
                             <File Id="ZLIB1.DLL" Name="zlib1.dll" Source="..\src\vendor\puppetlabs\facter\zlib1.dll" />
                         </Component>
@@ -121,7 +116,7 @@
             <ComponentRef Id="LIBWINPTHREAD_1.DLL" />
             <ComponentRef Id="SSLEAY32.DLL" />
             <ComponentRef Id="ZLIB1.DLL" />
-            <ComponentRef Id="LIBCPP-PCP-CLIENT.DLLL" />
+            <ComponentRef Id="LIBCPP_PCP_CLIENT.DLL" />
             <ComponentRef Id="LIBEAY32.DLL" />
             <ComponentRef Id="CUSTOM.BAT" />
         </Feature>
