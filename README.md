@@ -241,6 +241,12 @@ You must list the number of columns you want for your collector, modify it, and 
 
 ![Screenshot](meta/MAR-Facter.png?raw=true "Screenshot")
 
+## LICENSE
+
+MIT LICENSE - Where available and applicable to content not already licensed under the Apache 2.0. 
+
+The LICENSE in this context refers to all content custom to this repository and created under the authors work. All content/binaries or subsidary work including the distribution of precompiled packaged binaries maintains it original license, authors, and restrictions.
+
 ## Puppet Labs Reference
 
 * https://github.com/puppetlabs/facter
