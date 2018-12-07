@@ -2,6 +2,30 @@
 
 McAfee Facter is a distribution of the puppet/puppetlabs 64bit facter 3.x native binary for windows as an MSI. 
 
+## Supportablity
+
+This is a community tool orginally written by PuppetLabs and is distributed "as is" while licensed under the Apache 2.0 License. McAfee does not, and will not provide support for this tool. 
+
+## Using Facter within McAfee Active Response
+
+MFE Facter can be used just like any program in the McAfee EDR Tool MAR. There is a powershell script to transpose the `yaml` output of *multiline explicit facter* request to `csv`.
+
+You must list the number of columns you want for your collector, modify it, and upload it to EPO MAR Response Catalog.
+
+![Screenshot](meta/MAR-Facter.png?raw=true "Screenshot")
+
+## LICENSE
+
+MIT LICENSE - Where available and applicable to content not already licensed under the Apache 2.0. 
+
+The LICENSE in this context refers to all content custom to this repository and created under the authors work. All content/binaries or subsidary work including the distribution of precompiled packaged binaries maintains it original license, authors, and restrictions.
+
+The original Puppetlabs Facter is redistributed software with it's Apache licensed components, and thus includes a copy of the Apache license, and provides a clear Apache License attribution, and all modifications to the original Factor are here by notified.
+
+McAfee Factor is released a under different license, the unmodified parts of the software, however, retain the Apache License.
+
+## Example Usage
+
 ```C:\Program Files\McAfee\Facter>facter.exe -y --no-ruby
 aio_agent_version: 5.5.1
 dmi:
@@ -207,7 +231,6 @@ To https://github.com/shadowbq/McAfee_Facter.git
  * [new tag]         v3.11.1.8 -> v3.11.1.8
  ```
 
-
 ### Familiarity with WixEditor
 
 Using the WiX Editor with the new Wix Binary tools to build the MSI, although it doesnt support more complex options.
@@ -229,23 +252,6 @@ Facter includes a Windows Registry key "ProductID" which can be used for uninsta
 
 Note: The ProductID will change with each new version of the MSI.
 
-## Supportablity
-
-This is a community tool orginally written by PuppetLabs and is distributed "as is" while licensed under the Apache 2.0 License. McAfee does not, and will not provide support for this tool. 
-
-## Using Facter within McAfee Active Response
-
-MFE Facter can be used just like any program in the McAfee EDR Tool MAR. There is a powershell script to transpose the `yaml` output of *multiline explicit facter* request to `csv`.
-
-You must list the number of columns you want for your collector, modify it, and upload it to EPO MAR Response Catalog.
-
-![Screenshot](meta/MAR-Facter.png?raw=true "Screenshot")
-
-## LICENSE
-
-MIT LICENSE - Where available and applicable to content not already licensed under the Apache 2.0. 
-
-The LICENSE in this context refers to all content custom to this repository and created under the authors work. All content/binaries or subsidary work including the distribution of precompiled packaged binaries maintains it original license, authors, and restrictions.
 
 ## Puppet Labs Reference
 
