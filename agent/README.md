@@ -14,6 +14,12 @@ You can modfiy registry keys and create your custom properties. "CustomProps1" a
 
 All commands expect McAfee Agent 5.5.x. Although the commands may work in other versions of MA, the syntax and number of optional custom properties may differ.
 
+```
+C:\Program Files\McAfee\Agent>wmic bios get serialnumber
+SerialNumber
+VMware-56 4d 50 a5 57 62 17 6c-18 d1 05 48 4d 99 78 1c
+```
+
 ## View the Values
 
 `cmdagent -x or -i` will display the properties.
