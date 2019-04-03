@@ -235,6 +235,8 @@ To https://github.com/shadowbq/McAfee_Facter.git
 
 ### Familiarity with WixEditor
 
+The WixEditor is a 3rd party tool for candle.exe, and light.exe. (https://wixedit.github.io/) 
+
 Using the WiX Editor with the new Wix Binary tools to build the MSI, although it doesnt support more complex options.
 
 ![Screenshot](meta/WiXEditor.png?raw=true "Screenshot")
