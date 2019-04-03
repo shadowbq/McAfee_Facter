@@ -213,6 +213,10 @@ light.exe -nologo facter.wixobj -cultures:fr-fr -loc fr-fr.wxl -out facter-fr-fr
 
 The `-loc` flag is used to specify the language file to use. It is important to include the `-cultures` flag on the command line to ensure the correct localized strings are included for extensions such as WiXUIExtension.
 
+### Alternatives to MSI
+
+http://jrsoftware.org/isinfo.php
+
 ## Releasing
 
 ```
